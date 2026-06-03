@@ -116,19 +116,8 @@ nav {
 .hero-price { font-size: 0.85rem; color: var(--muted); margin-top: 1.2rem; }
 .hero-price strong { color: var(--star); font-size: 1.1rem; }
 .hero-visual { display: flex; align-items: center; justify-content: center; padding: 4rem 4rem 4rem 2rem; position: relative; z-index: 2; }
-.book-mockup { position: relative; width: 260px; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); animation: float 5s ease-in-out infinite; }
+.book-mockup { position: relative; width: 260px; animation: float 5s ease-in-out infinite; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
-.book-cover { width: 260px; height: 370px; background: linear-gradient(135deg, var(--night-mid) 0%, #16122a 100%); border-radius: 4px 12px 12px 4px; position: relative; overflow: hidden; border-left: 8px solid #0e0c1a; box-shadow: inset -3px 0 8px rgba(0,0,0,0.4), 6px 0 20px rgba(0,0,0,0.5); }
-.book-cover::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(184,147,90,0.2) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(201,146,122,0.1) 0%, transparent 40%); }
-.book-cover-inner { padding: 2.5rem 1.8rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 1; }
-.cover-moon { width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--star) 0%, var(--gold) 60%, rgba(184,147,90,0.4) 100%); box-shadow: 0 0 30px rgba(232,213,163,0.4); margin-bottom: 0.5rem; }
-.cover-stars-mini { display: flex; gap: 4px; margin-bottom: 1rem; }
-.cover-star-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--star); opacity: 0.7; }
-.cover-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; line-height: 1.2; color: var(--cream); }
-.cover-title span { color: var(--star); font-style: italic; }
-.cover-subtitle { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft); opacity: 0.7; line-height: 1.5; margin-top: 0.5rem; }
-.cover-author { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
-.cover-line { width: 30px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 0.4rem; }
 
 /* QUOTE BAND */
 .quote-band { background: var(--blush); padding: 3rem 6rem; text-align: center; }
@@ -363,25 +352,33 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
   </div>
   <div class="hero-visual">
     <div class="book-mockup">
-      <div class="book-cover">
-        <div class="book-cover-inner">
-          <div>
-            <div class="cover-moon"></div>
-            <div class="cover-stars-mini">
-              <div class="cover-star-dot"></div><div class="cover-star-dot"></div><div class="cover-star-dot"></div>
-              <div class="cover-star-dot" style="opacity:0.3"></div><div class="cover-star-dot" style="opacity:0.15"></div>
-            </div>
-          </div>
-          <div>
-            <div class="cover-title">The <span>Midnight</span><br>Parent</div>
-            <div class="cover-subtitle">An Emotional Guide for Surviving and Thriving Through Sleepless Nights</div>
-          </div>
-          <div>
-            <div class="cover-line"></div>
-            <div class="cover-author">Shumani Phaswana</div>
-          </div>
-        </div>
-      </div>
+      <svg viewBox="0 0 420 560" xmlns="http://www.w3.org/2000/svg" style="width:260px;border-radius:3px;filter:drop-shadow(0 30px 60px rgba(0,0,0,0.5));">
+        <!-- Page background -->
+        <rect width="420" height="560" fill="#f5ede0"/>
+        <!-- Outer border -->
+        <rect x="10" y="10" width="400" height="540" fill="none" stroke="#d4b896" stroke-width="0.8" rx="2"/>
+        <!-- Inner border -->
+        <rect x="16" y="16" width="388" height="528" fill="none" stroke="#d4b896" stroke-width="0.4" rx="1"/>
+
+        <!-- Title -->
+        <text x="210" y="98" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="700" fill="#5c3317" letter-spacing="0.5">The Midnight Parent</text>
+
+        <!-- Divider line under title -->
+        <line x1="80" y1="112" x2="340" y2="112" stroke="#b8935a" stroke-width="0.8"/>
+
+        <!-- Subtitle line 1 -->
+        <text x="210" y="138" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#7a4e2d">An Emotional Guide for Surviving and Thriving</text>
+        <!-- Subtitle line 2 -->
+        <text x="210" y="156" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="13" font-style="italic" fill="#7a4e2d">Through Sleepless Nights with Your Newborn</text>
+
+        <!-- Stars -->
+        <text x="210" y="182" text-anchor="middle" font-family="Georgia, serif" font-size="11" fill="#b8935a" letter-spacing="6">* * *</text>
+
+        <!-- Author -->
+        <text x="210" y="208" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="12" fill="#5c3317">by Shumani Phaswana</text>
+        <!-- For parents line -->
+        <text x="210" y="226" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="10" font-style="italic" fill="#9a7060">For parents of babies aged 0&#8211;12 months</text>
+      </svg>
     </div>
   </div>
 </section>
