@@ -116,8 +116,19 @@ nav {
 .hero-price { font-size: 0.85rem; color: var(--muted); margin-top: 1.2rem; }
 .hero-price strong { color: var(--star); font-size: 1.1rem; }
 .hero-visual { display: flex; align-items: center; justify-content: center; padding: 4rem 4rem 4rem 2rem; position: relative; z-index: 2; }
-.book-mockup { position: relative; width: 300px; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5)); animation: float 5s ease-in-out infinite; }
+.book-mockup { position: relative; width: 260px; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); animation: float 5s ease-in-out infinite; }
 @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+.book-cover { width: 260px; height: 370px; background: linear-gradient(135deg, var(--night-mid) 0%, #16122a 100%); border-radius: 4px 12px 12px 4px; position: relative; overflow: hidden; border-left: 8px solid #0e0c1a; box-shadow: inset -3px 0 8px rgba(0,0,0,0.4), 6px 0 20px rgba(0,0,0,0.5); }
+.book-cover::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(184,147,90,0.2) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(201,146,122,0.1) 0%, transparent 40%); }
+.book-cover-inner { padding: 2.5rem 1.8rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 1; }
+.cover-moon { width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--star) 0%, var(--gold) 60%, rgba(184,147,90,0.4) 100%); box-shadow: 0 0 30px rgba(232,213,163,0.4); margin-bottom: 0.5rem; }
+.cover-stars-mini { display: flex; gap: 4px; margin-bottom: 1rem; }
+.cover-star-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--star); opacity: 0.7; }
+.cover-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; line-height: 1.2; color: var(--cream); }
+.cover-title span { color: var(--star); font-style: italic; }
+.cover-subtitle { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft); opacity: 0.7; line-height: 1.5; margin-top: 0.5rem; }
+.cover-author { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+.cover-line { width: 30px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 0.4rem; }
 
 /* QUOTE BAND */
 .quote-band { background: var(--blush); padding: 3rem 6rem; text-align: center; }
@@ -298,6 +309,9 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
 .footer-links { display: flex; gap: 2rem; }
 .footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: var(--blush); }
+.footer-policy-links { display: flex; gap: 1.5rem; width: 100%; justify-content: center; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 0.5rem; }
+.footer-policy-links a { font-size: 0.72rem; color: var(--muted); text-decoration: none; letter-spacing: 0.08em; transition: color 0.2s; }
+.footer-policy-links a:hover { color: var(--blush); }
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
@@ -349,56 +363,25 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
   </div>
   <div class="hero-visual">
     <div class="book-mockup">
-      <svg width="100%" viewBox="0 0 680 900" role="img" xmlns="http://www.w3.org/2000/svg" style="border-radius:8px;overflow:hidden;">
-        <title>The Midnight Parent book cover</title>
-        <desc>Book cover with cream background, warm brown typography, and a mother holding a baby silhouette</desc>
-        <rect width="680" height="900" fill="#f5ede0" rx="6"/>
-        <rect x="18" y="18" width="644" height="864" fill="none" stroke="#c9a882" stroke-width="1" rx="4"/>
-        <rect x="26" y="26" width="628" height="848" fill="none" stroke="#c9a882" stroke-width="0.4" rx="3"/>
-        <line x1="120" y1="90" x2="560" y2="90" stroke="#b8935a" stroke-width="0.8"/>
-        <text x="340" y="155" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#5c3317" letter-spacing="1">The Midnight</text>
-        <text x="340" y="215" text-anchor="middle" font-family="Georgia, serif" font-size="54" font-weight="700" fill="#5c3317" letter-spacing="1">Parent</text>
-        <line x1="160" y1="238" x2="520" y2="238" stroke="#b8935a" stroke-width="0.8"/>
-        <text x="340" y="275" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7a4e2d">An Emotional Guide for Surviving and Thriving</text>
-        <text x="340" y="300" text-anchor="middle" font-family="Georgia, serif" font-size="18" font-style="italic" fill="#7a4e2d">Through Sleepless Nights with Your Newborn</text>
-        <text x="340" y="335" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#b8935a">* * *</text>
-        <text x="340" y="365" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#5c3317">by Shumani Phaswana</text>
-        <text x="340" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="13" font-style="italic" fill="#9a7060">For parents of babies aged 0&#8211;12 months</text>
-        <line x1="220" y1="410" x2="460" y2="410" stroke="#d4b896" stroke-width="0.5"/>
-        <ellipse cx="340" cy="850" rx="160" ry="18" fill="#c9a882" opacity="0.3"/>
-        <path d="M210 780 Q220 760 250 750 Q290 740 340 742 Q390 740 430 750 Q460 760 470 780 L475 830 Q460 845 340 848 Q220 845 205 830 Z" fill="#6b3a1f"/>
-        <path d="M255 580 Q260 555 275 540 Q300 520 340 518 Q380 520 405 540 Q420 555 425 580 L435 680 Q430 720 420 745 Q390 758 340 760 Q290 758 260 745 Q250 720 245 680 Z" fill="#7a4520"/>
-        <path d="M250 595 Q222 605 208 632 Q196 660 202 692 Q210 722 234 742 Q245 750 258 747 Q252 740 245 730 Q224 712 218 688 Q213 662 224 640 Q237 617 258 607 Z" fill="#6b3a1f"/>
-        <path d="M425 600 Q450 610 462 630 Q472 655 468 685 Q460 715 442 735 Q432 745 422 747 Q428 740 434 728 Q452 710 458 684 Q462 658 452 636 Q440 614 422 606 Z" fill="#6b3a1f"/>
-        <path d="M315 518 Q325 505 340 502 Q355 505 365 518 L368 540 Q355 545 340 546 Q325 545 312 540 Z" fill="#7a4520"/>
-        <ellipse cx="340" cy="490" rx="52" ry="58" fill="#8b4f25"/>
-        <path d="M293 465 Q280 440 282 415 Q285 390 295 375 Q310 360 340 358 Q370 360 385 375 Q395 390 398 415 Q400 440 387 465 Q375 450 365 445 Q352 442 340 442 Q328 442 315 445 Q305 450 293 465 Z" fill="#3d1f0a"/>
-        <path d="M290 465 Q275 490 272 520 Q270 550 276 575 Q260 555 255 525 Q252 495 260 470 Q270 450 290 440 Z" fill="#3d1f0a"/>
-        <path d="M390 465 Q405 490 408 520 Q410 550 404 575 Q420 555 425 525 Q428 495 420 470 Q410 450 390 440 Z" fill="#3d1f0a"/>
-        <path d="M318 482 Q326 478 334 481" fill="none" stroke="#3d1f0a" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M346 481 Q354 478 362 482" fill="none" stroke="#3d1f0a" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M337 492 Q340 498 343 492" fill="none" stroke="#5c3317" stroke-width="1" stroke-linecap="round"/>
-        <path d="M328 506 Q340 514 352 506" fill="none" stroke="#3d1f0a" stroke-width="1.5" stroke-linecap="round"/>
-        <ellipse cx="340" cy="700" rx="75" ry="50" fill="#e8d5b8"/>
-        <path d="M268 700 Q270 660 295 648 Q320 638 340 638 Q360 638 385 648 Q410 660 412 700 Q410 740 385 748 Q360 755 340 755 Q320 755 295 748 Q270 740 268 700 Z" fill="#d4b896"/>
-        <path d="M275 695 Q285 675 310 668 Q325 663 340 663 Q355 663 370 668 Q395 675 405 695" fill="none" stroke="#c9a882" stroke-width="1" opacity="0.6"/>
-        <ellipse cx="340" cy="635" rx="36" ry="34" fill="#c9956a"/>
-        <path d="M326 630 Q330 627 334 630" fill="none" stroke="#5c3317" stroke-width="1.2" stroke-linecap="round"/>
-        <path d="M346 630 Q350 627 354 630" fill="none" stroke="#5c3317" stroke-width="1.2" stroke-linecap="round"/>
-        <circle cx="340" cy="638" r="1.5" fill="#b07848" opacity="0.6"/>
-        <path d="M335 645 Q340 648 345 645" fill="none" stroke="#5c3317" stroke-width="1" stroke-linecap="round"/>
-        <path d="M318 618 Q325 608 340 606 Q355 608 362 618" fill="none" stroke="#5c3317" stroke-width="1.5" stroke-linecap="round"/>
-        <path d="M300 640 Q292 632 295 620 Q300 610 312 614 Q305 622 308 632 Q310 638 315 642 Z" fill="#7a4520"/>
-        <path d="M380 640 Q388 632 385 620 Q380 610 368 614 Q375 622 372 632 Q370 638 365 642 Z" fill="#6b3a1f"/>
-        <ellipse cx="340" cy="690" rx="175" ry="160" fill="#f5c97a" opacity="0.08"/>
-        <circle cx="190" cy="500" r="2" fill="#b8935a" opacity="0.5"/>
-        <circle cx="195" cy="510" r="1" fill="#b8935a" opacity="0.3"/>
-        <circle cx="490" cy="510" r="2" fill="#b8935a" opacity="0.5"/>
-        <circle cx="485" cy="522" r="1" fill="#b8935a" opacity="0.3"/>
-        <circle cx="180" cy="650" r="1.5" fill="#b8935a" opacity="0.4"/>
-        <circle cx="500" cy="640" r="1.5" fill="#b8935a" opacity="0.4"/>
-        <line x1="120" y1="870" x2="560" y2="870" stroke="#b8935a" stroke-width="0.8"/>
-      </svg>
+      <div class="book-cover">
+        <div class="book-cover-inner">
+          <div>
+            <div class="cover-moon"></div>
+            <div class="cover-stars-mini">
+              <div class="cover-star-dot"></div><div class="cover-star-dot"></div><div class="cover-star-dot"></div>
+              <div class="cover-star-dot" style="opacity:0.3"></div><div class="cover-star-dot" style="opacity:0.15"></div>
+            </div>
+          </div>
+          <div>
+            <div class="cover-title">The <span>Midnight</span><br>Parent</div>
+            <div class="cover-subtitle">An Emotional Guide for Surviving and Thriving Through Sleepless Nights</div>
+          </div>
+          <div>
+            <div class="cover-line"></div>
+            <div class="cover-author">Shumani Phaswana</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -723,6 +706,77 @@ function closePost() {
   document.getElementById('postOverlay').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+// ── Policy pages ──
+var policyContent = {
+  refund: {
+    title: 'Refund Policy',
+    html: `
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#2c2018;margin-bottom:0.4rem;">Refund Policy</h2>
+      <p style="font-size:0.8rem;color:#8c7b6b;margin-bottom:1.5rem;">Last updated: December 2024</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1rem;">Thank you for purchasing <em>The Midnight Parent</em>. Because this is a digital product delivered instantly upon payment, we are generally unable to offer refunds once the file has been accessed or downloaded.</p>
+      <p style="font-size:0.95rem;font-weight:500;color:#2c2018;margin-bottom:0.4rem;">Eligible refund situations</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1rem;">We will issue a full refund if: the file you received is corrupted or unreadable; you were charged more than once for the same purchase; or the product delivered is substantially different from what was described.</p>
+      <p style="font-size:0.95rem;font-weight:500;color:#2c2018;margin-bottom:0.4rem;">How to request a refund</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1rem;">Please contact us within 7 days of purchase at <strong>shumoola5@gmail.com</strong> with your order details and a description of the issue. We will respond within 2 business days.</p>
+      <p style="font-size:0.95rem;font-weight:500;color:#2c2018;margin-bottom:0.4rem;">No physical shipping</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:0;">This product is a digital PDF download. There is no physical product and no shipping involved. Your file is delivered electronically to your email address immediately after payment is confirmed.</p>
+    `
+  },
+  privacy: {
+    title: 'Privacy Policy',
+    html: `
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#2c2018;margin-bottom:0.4rem;">Privacy Policy</h2>
+      <p style="font-size:0.8rem;color:#8c7b6b;margin-bottom:1.5rem;">Last updated: December 2024</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1rem;">Your privacy is important to us. This policy explains what information we collect and how we use it.</p>
+      <p style="font-size:0.95rem;font-weight:500;color:#2c2018;margin-bottom:0.4rem;">Information we collect</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1rem;">When you purchase or subscribe, we collect your name and email address. Payment information is processed securely by Paystack and is never stored on our servers.</p>
+      <p style="font-size:0.95rem;font-weight:500;color:#2c2018;margin-bottom:0.4rem;">How we use your information</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1rem;">We use your email to deliver your purchased product and, if you subscribed, to send our weekly blog newsletter. We do not sell, rent, or share your personal information with third parties.</p>
+      <p style="font-size:0.95rem;font-weight:500;color:#2c2018;margin-bottom:0.4rem;">Cookies and analytics</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1rem;">We use Google Analytics to understand how visitors use our site. This may use cookies. No personally identifiable information is shared with Google Analytics.</p>
+      <p style="font-size:0.95rem;font-weight:500;color:#2c2018;margin-bottom:0.4rem;">Contact</p>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:0;">For privacy concerns, contact us at <strong>shumoola5@gmail.com</strong>.</p>
+    `
+  },
+  contact: {
+    title: 'Contact',
+    html: `
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;color:#2c2018;margin-bottom:0.4rem;">Contact Us</h2>
+      <p style="font-size:0.95rem;line-height:1.8;color:#8c7b6b;margin-bottom:1.5rem;">We would love to hear from you. Whether you have a question about the book, a technical issue with your download, or just want to share how the midnight hours are going &#8212; reach out.</p>
+      <div style="background:#f7f0e6;border-radius:6px;padding:1.5rem;margin-bottom:1.2rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#c9927a;margin-bottom:0.5rem;">Email</p>
+        <p style="font-size:1.1rem;font-family:'Cormorant Garamond',serif;color:#2c2018;margin:0;"><strong>shumoola5@gmail.com</strong></p>
+      </div>
+      <div style="background:#f7f0e6;border-radius:6px;padding:1.5rem;margin-bottom:1.2rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#c9927a;margin-bottom:0.5rem;">Author</p>
+        <p style="font-size:1rem;color:#8c7b6b;margin:0;">Shumani Phaswana</p>
+      </div>
+      <div style="background:#f7f0e6;border-radius:6px;padding:1.5rem;margin-bottom:1.5rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:#c9927a;margin-bottom:0.5rem;">Response Time</p>
+        <p style="font-size:1rem;color:#8c7b6b;margin:0;">We respond to all enquiries within 2 business days.</p>
+      </div>
+      <p style="font-size:0.88rem;font-style:italic;color:#8c7b6b;text-align:center;">For download issues, please include your order number and the email address used at checkout.</p>
+    `
+  }
+};
+
+function openPolicy(type, e) {
+  if(e) e.preventDefault();
+  var p = policyContent[type];
+  if(!p) return;
+  document.getElementById('policy-content').innerHTML = p.html;
+  document.getElementById('policyModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  if(typeof gtag !== 'undefined') gtag('event', 'policy_view', {policy_type: type});
+}
+function closePolicy() {
+  document.getElementById('policyModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('policyModal').addEventListener('click', function(e) {
+  if(e.target === this) closePolicy();
+});
 </script>
 
 </body>
