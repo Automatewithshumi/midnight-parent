@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ SEO META TAGS ═══ -->
+<title>The Midnight Parent — Emotional Guide for Sleepless Nights | Shumani Phaswana</title>
+<meta name="description" content="The Midnight Parent is an emotional guide for surviving and thriving through sleepless nights with your newborn. Written by Shumani Phaswana for parents of babies aged 0–12 months.">
+<meta name="keywords" content="newborn sleep, postpartum emotions, new parent guide, sleepless nights, baby sleep, postpartum anxiety, midnight parent, Shumani Phaswana, parenting book South Africa">
+<meta name="author" content="Shumani Phaswana">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.themidnightparent.co.za/">
+
+<!-- Open Graph (for social sharing) -->
+<meta property="og:type" content="book">
+<meta property="og:title" content="The Midnight Parent — Emotional Guide for Sleepless Nights">
+<meta property="og:description" content="Not a sleep training manual. An emotional map for the most overwhelming months of your life. By Shumani Phaswana.">
+<meta property="og:url" content="https://www.themidnightparent.co.za/">
+<meta property="og:image" content="https://www.themidnightparent.co.za/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Midnight Parent — Shumani Phaswana">
+<meta name="twitter:description" content="An emotional guide for surviving and thriving through sleepless nights with your newborn.">
+
+<!-- ═══ GOOGLE SEARCH CONSOLE VERIFICATION ═══ -->
+<!-- REPLACE content value with your actual GSC verification code -->
+<meta name="google-site-verification" content="PASTE_YOUR_GSC_VERIFICATION_CODE_HERE">
+
+<!-- ═══ GOOGLE ANALYTICS ═══ -->
+<!-- REPLACE G-XXXXXXXXXX with your actual Measurement ID from analytics.google.com -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXXXXX');
+</script>
+
+<!-- ═══ SCHEMA MARKUP (helps Google understand your book) ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Book",
+  "name": "The Midnight Parent",
+  "author": { "@type": "Person", "name": "Shumani Phaswana" },
+  "description": "An emotional guide for surviving and thriving through sleepless nights with your newborn. For parents of babies aged 0-12 months.",
+  "genre": "Parenting",
+  "inLanguage": "en",
+  "offers": {
+    "@type": "Offer",
+    "price": "9.99",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "publisher": { "@type": "Person", "name": "Shumani Phaswana" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --ink: #1a1410;
+  --warm-dark: #2c2018;
+  --cream: #f7f0e6;
+  --parchment: #ede4d4;
+  --blush: #c9927a;
+  --gold: #b8935a;
+  --muted: #8c7b6b;
+  --soft: #d4c4b0;
+  --night: #1e1a2e;
+  --night-mid: #2a2540;
+  --star: #e8d5a3;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--ink); overflow-x: hidden; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.2rem 4rem;
+  background: rgba(247,240,230,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--soft);
+}
+.nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 500; letter-spacing: 0.04em; color: var(--warm-dark); text-decoration: none; }
+.nav-links { display: flex; gap: 2.2rem; list-style: none; }
+.nav-links a { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--blush); }
+.nav-cta { background: var(--night); color: var(--star) !important; padding: 0.55rem 1.4rem; border-radius: 2px; }
+.nav-cta:hover { background: var(--blush) !important; color: var(--cream) !important; }
+
+/* HERO */
+.hero { min-height: 100vh; background: var(--night); display: grid; grid-template-columns: 1fr 1fr; position: relative; overflow: hidden; padding-top: 80px; }
+.hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 60%, rgba(184,147,90,0.12) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(201,146,122,0.08) 0%, transparent 50%); pointer-events: none; }
+.stars { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.star { position: absolute; border-radius: 50%; background: var(--star); opacity: 0; animation: twinkle var(--dur) var(--delay) ease-in-out infinite; }
+@keyframes twinkle { 0%, 100% { opacity: 0; } 50% { opacity: var(--max-op); } }
+.hero-text { display: flex; flex-direction: column; justify-content: center; padding: 5rem 3rem 5rem 6rem; position: relative; z-index: 2; }
+.hero-eyebrow { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blush); margin-bottom: 1.5rem; }
+.hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.05; color: var(--cream); margin-bottom: 0.5rem; }
+.hero-title em { color: var(--star); font-style: italic; }
+.hero-subtitle { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-weight: 300; font-style: italic; color: var(--soft); margin-bottom: 2rem; line-height: 1.6; }
+.hero-author { font-size: 0.78rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 3rem; }
+.hero-desc { font-size: 1rem; font-weight: 300; line-height: 1.75; color: rgba(237,228,212,0.75); max-width: 420px; margin-bottom: 3rem; }
+.hero-actions { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
+.btn-primary { display: inline-block; background: var(--blush); color: var(--cream); padding: 1rem 2.2rem; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; border: none; cursor: pointer; font-family: 'Jost', sans-serif; }
+.btn-primary:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,146,122,0.4); }
+.btn-secondary { display: inline-block; border: 1px solid rgba(237,228,212,0.3); color: var(--soft); padding: 1rem 2.2rem; text-decoration: none; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; border-radius: 2px; transition: all 0.3s; cursor: pointer; background: transparent; font-family: 'Jost', sans-serif; border: none; border: 1px solid rgba(237,228,212,0.3); }
+.btn-secondary:hover { border-color: var(--blush); color: var(--blush); }
+.hero-price { font-size: 0.85rem; color: var(--muted); margin-top: 1.2rem; }
+.hero-price strong { color: var(--star); font-size: 1.1rem; }
+.hero-visual { display: flex; align-items: center; justify-content: center; padding: 4rem 4rem 4rem 2rem; position: relative; z-index: 2; }
+.book-mockup { position: relative; width: 260px; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.6)); animation: float 5s ease-in-out infinite; }
+@keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+.book-cover { width: 260px; height: 370px; background: linear-gradient(135deg, var(--night-mid) 0%, #16122a 100%); border-radius: 4px 12px 12px 4px; position: relative; overflow: hidden; border-left: 8px solid #0e0c1a; box-shadow: inset -3px 0 8px rgba(0,0,0,0.4), 6px 0 20px rgba(0,0,0,0.5); }
+.book-cover::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(184,147,90,0.2) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(201,146,122,0.1) 0%, transparent 40%); }
+.book-cover-inner { padding: 2.5rem 1.8rem; height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 1; }
+.cover-moon { width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, var(--star) 0%, var(--gold) 60%, rgba(184,147,90,0.4) 100%); box-shadow: 0 0 30px rgba(232,213,163,0.4); margin-bottom: 0.5rem; }
+.cover-stars-mini { display: flex; gap: 4px; margin-bottom: 1rem; }
+.cover-star-dot { width: 3px; height: 3px; border-radius: 50%; background: var(--star); opacity: 0.7; }
+.cover-title { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; line-height: 1.2; color: var(--cream); }
+.cover-title span { color: var(--star); font-style: italic; }
+.cover-subtitle { font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft); opacity: 0.7; line-height: 1.5; margin-top: 0.5rem; }
+.cover-author { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+.cover-line { width: 30px; height: 1px; background: var(--gold); opacity: 0.5; margin-bottom: 0.4rem; }
+
+/* QUOTE BAND */
+.quote-band { background: var(--blush); padding: 3rem 6rem; text-align: center; }
+.quote-band blockquote { font-family: 'Cormorant Garamond', serif; font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 300; font-style: italic; color: var(--cream); line-height: 1.5; max-width: 700px; margin: 0 auto; }
+.quote-band cite { display: block; margin-top: 1rem; font-family: 'Jost', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(247,240,230,0.7); font-style: normal; }
+
+/* SECTION SHARED */
+.section-label { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blush); margin-bottom: 1rem; }
+.section-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 400; line-height: 1.2; color: var(--warm-dark); margin-bottom: 1.5rem; }
+.section-title em { color: var(--blush); font-style: italic; }
+
+/* ABOUT */
+.about { padding: 7rem 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
+.about-body p { font-size: 1rem; font-weight: 300; line-height: 1.85; color: var(--muted); margin-bottom: 1.2rem; }
+.about-visual { position: relative; background: var(--night); border-radius: 4px; padding: 3rem; overflow: hidden; }
+.about-visual::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 30%, rgba(184,147,90,0.15) 0%, transparent 60%); }
+.about-quote { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 300; font-style: italic; color: var(--star); line-height: 1.5; position: relative; z-index: 1; }
+.about-quote::before { content: '\201C'; font-size: 5rem; line-height: 0; position: absolute; top: 1.5rem; left: -1rem; color: var(--blush); opacity: 0.3; font-family: 'Cormorant Garamond', serif; }
+
+/* CHAPTERS */
+.chapters-section { background: var(--parchment); padding: 7rem 6rem; }
+.chapters-header { text-align: center; margin-bottom: 4rem; }
+.chapters-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.chapter-card { background: var(--cream); padding: 2.5rem 2rem; transition: all 0.3s; cursor: default; position: relative; overflow: hidden; }
+.chapter-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--blush); transform: scaleX(0); transform-origin: left; transition: transform 0.3s; }
+.chapter-card:hover { background: var(--night); }
+.chapter-card:hover::after { transform: scaleX(1); }
+.chapter-card:hover .ch-num { color: var(--gold); }
+.chapter-card:hover .ch-title { color: var(--star); }
+.chapter-card:hover .ch-desc { color: var(--soft); }
+.ch-num { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; line-height: 1; color: var(--soft); margin-bottom: 1rem; transition: color 0.3s; }
+.ch-title { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-weight: 500; color: var(--warm-dark); margin-bottom: 0.7rem; transition: color 0.3s; }
+.ch-desc { font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--muted); transition: color 0.3s; }
+
+/* AFFIRMATIONS */
+.affirmations-section { background: var(--night); padding: 7rem 6rem; position: relative; overflow: hidden; }
+.affirmations-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 50%, rgba(184,147,90,0.08) 0%, transparent 70%); pointer-events: none; }
+.affirmations-header { text-align: center; margin-bottom: 3rem; }
+.affirmations-header .section-title { color: var(--cream); }
+.affirmations-sub { font-size: 0.9rem; font-weight: 300; color: var(--soft); margin-top: -0.5rem; }
+.affirmations-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; position: relative; z-index: 1; }
+.affirmation-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(232,213,163,0.12); border-radius: 4px; padding: 1.8rem; transition: all 0.3s; }
+.affirmation-card:hover { background: rgba(201,146,122,0.12); border-color: rgba(201,146,122,0.3); transform: translateY(-3px); }
+.aff-num { font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blush); margin-bottom: 0.7rem; }
+.aff-text { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-weight: 300; font-style: italic; line-height: 1.6; color: var(--star); }
+
+/* BUY */
+.buy-section { padding: 7rem 6rem; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+.buy-text p { font-size: 1rem; font-weight: 300; line-height: 1.8; color: var(--muted); margin-bottom: 1.5rem; }
+.includes-list { list-style: none; margin-bottom: 2.5rem; }
+.includes-list li { font-size: 0.9rem; font-weight: 300; color: var(--warm-dark); padding: 0.6rem 0; border-bottom: 1px solid var(--soft); display: flex; align-items: center; gap: 0.8rem; }
+.includes-list li::before { content: '\2736'; color: var(--blush); font-size: 0.6rem; flex-shrink: 0; }
+.buy-card { background: var(--night); border-radius: 8px; padding: 3rem; position: relative; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.15); }
+.buy-card::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(184,147,90,0.15) 0%, transparent 60%); pointer-events: none; }
+.buy-card-inner { position: relative; z-index: 1; }
+.buy-card-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blush); margin-bottom: 1rem; }
+.buy-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--cream); margin-bottom: 0.5rem; }
+.buy-card-format { font-size: 0.8rem; color: var(--muted); margin-bottom: 2rem; }
+.price-display { display: flex; align-items: baseline; gap: 0.3rem; margin-bottom: 0.5rem; }
+.price-amount { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; font-weight: 300; color: var(--star); line-height: 1; }
+.price-currency { font-size: 1.2rem; color: var(--gold); align-self: flex-start; margin-top: 0.5rem; }
+.price-note { font-size: 0.78rem; color: var(--muted); margin-bottom: 2rem; }
+.buy-divider { height: 1px; background: rgba(255,255,255,0.08); margin: 1.5rem 0; }
+.buy-perks { list-style: none; margin-bottom: 2rem; }
+.buy-perks li { font-size: 0.85rem; font-weight: 300; color: var(--soft); padding: 0.4rem 0; display: flex; gap: 0.8rem; align-items: center; }
+.buy-perks li::before { content: '\2192'; color: var(--blush); }
+.btn-buy { display: block; width: 100%; text-align: center; background: var(--blush); color: var(--cream); padding: 1.1rem; text-decoration: none; font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; border-radius: 3px; transition: all 0.3s; border: none; cursor: pointer; font-family: 'Jost', sans-serif; }
+.btn-buy:hover { background: var(--gold); box-shadow: 0 8px 30px rgba(184,147,90,0.4); transform: translateY(-2px); }
+.secure-note { text-align: center; margin-top: 1rem; font-size: 0.72rem; color: var(--muted); letter-spacing: 0.05em; }
+
+/* AUTHOR */
+.author-section { background: var(--parchment); padding: 7rem 6rem; display: grid; grid-template-columns: auto 1fr; gap: 5rem; align-items: center; }
+.author-avatar { width: 200px; height: 200px; border-radius: 50%; background: linear-gradient(135deg, var(--night) 0%, var(--night-mid) 100%); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: 0 20px 50px rgba(0,0,0,0.15); border: 4px solid var(--blush); font-family: 'Cormorant Garamond', serif; font-size: 4.5rem; font-weight: 300; color: var(--star); }
+.author-name { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 400; color: var(--warm-dark); margin-bottom: 1.2rem; }
+.author-bio p { font-size: 1rem; font-weight: 300; line-height: 1.85; color: var(--muted); margin-bottom: 1rem; }
+
+/* TESTIMONIALS */
+.testimonials { padding: 7rem 6rem; background: var(--cream); }
+.testimonials-header { text-align: center; margin-bottom: 4rem; }
+.test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.test-card { border: 1px solid var(--soft); border-radius: 4px; padding: 2.2rem; transition: box-shadow 0.3s; }
+.test-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.07); }
+.test-stars { color: var(--gold); font-size: 0.8rem; margin-bottom: 1rem; }
+.test-text { font-family: 'Cormorant Garamond', serif; font-size: 1.05rem; font-style: italic; font-weight: 300; line-height: 1.7; color: var(--warm-dark); margin-bottom: 1.2rem; }
+.test-author { font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+
+/* ═══ BLOG SECTION ═══ */
+.blog-section { background: var(--parchment); padding: 7rem 6rem; }
+.blog-header { text-align: center; margin-bottom: 4rem; }
+.blog-header p.section-label { text-align: center; }
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-bottom: 3rem; }
+.blog-card { background: var(--cream); border-radius: 4px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; cursor: pointer; }
+.blog-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.1); }
+.blog-card-img {
+  height: 180px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 3rem;
+  position: relative; overflow: hidden;
+}
+.blog-card-img.emotion { background: linear-gradient(135deg, var(--night) 0%, #2d1f35 100%); }
+.blog-card-img.sleep { background: linear-gradient(135deg, #1a2a3a 0%, var(--night-mid) 100%); }
+.blog-card-img.mixed { background: linear-gradient(135deg, #2a1f18 0%, #3d2c20 100%); }
+.blog-card-body { padding: 1.8rem; }
+.blog-tag { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blush); margin-bottom: 0.7rem; }
+.blog-card-title { font-family: 'Cormorant Garamond', serif; font-size: 1.25rem; font-weight: 500; color: var(--warm-dark); margin-bottom: 0.7rem; line-height: 1.3; }
+.blog-card-excerpt { font-size: 0.85rem; font-weight: 300; line-height: 1.7; color: var(--muted); margin-bottom: 1.2rem; }
+.blog-meta { font-size: 0.72rem; color: var(--soft); letter-spacing: 0.05em; display: flex; justify-content: space-between; }
+.blog-read-more { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--blush); text-decoration: none; transition: color 0.2s; display: inline-block; margin-top: 0.5rem; }
+.blog-read-more:hover { color: var(--gold); }
+.blog-cta { text-align: center; }
+.blog-cta p { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem; }
+
+/* BLOG POST OVERLAY */
+.post-overlay { position: fixed; inset: 0; z-index: 200; background: var(--cream); overflow-y: auto; transform: translateX(100%); transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.post-overlay.open { transform: translateX(0); }
+.post-header { background: var(--night); padding: 6rem 6rem 4rem; position: relative; }
+.post-back { position: absolute; top: 2rem; left: 4rem; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--soft); background: none; border: none; cursor: pointer; transition: color 0.2s; font-family: 'Jost', sans-serif; }
+.post-back:hover { color: var(--blush); }
+.post-tag { font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--blush); margin-bottom: 1rem; }
+.post-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3.5rem); font-weight: 300; color: var(--cream); line-height: 1.15; max-width: 700px; margin-bottom: 1rem; }
+.post-byline { font-size: 0.8rem; color: var(--muted); }
+.post-body { max-width: 720px; margin: 0 auto; padding: 4rem 2rem 6rem; }
+.post-body h2 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--warm-dark); margin: 2.5rem 0 1rem; }
+.post-body p { font-size: 1rem; font-weight: 300; line-height: 1.9; color: var(--muted); margin-bottom: 1.4rem; }
+.post-body blockquote { border-left: 3px solid var(--blush); padding: 0.5rem 0 0.5rem 1.5rem; margin: 2rem 0; font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--warm-dark); line-height: 1.6; }
+.post-cta-box { background: var(--night); border-radius: 6px; padding: 2.5rem; text-align: center; margin-top: 3rem; }
+.post-cta-box p { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; font-style: italic; color: var(--star); margin-bottom: 1.5rem; font-weight: 300; }
+
+/* RESOURCES */
+.resources-section { background: var(--cream); padding: 5rem 6rem; }
+.resources-header { margin-bottom: 2.5rem; }
+.resources-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+.resource-group h4 { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blush); margin-bottom: 1rem; }
+.resource-item { padding: 0.8rem 0; border-bottom: 1px solid var(--soft); }
+.r-title { font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-weight: 500; color: var(--warm-dark); margin-bottom: 0.2rem; display: block; text-decoration: none; transition: color 0.2s; }
+a.r-title:hover { color: var(--blush); }
+.r-desc { font-size: 0.8rem; color: var(--muted); }
+
+/* MODAL */
+.modal-overlay { position: fixed; inset: 0; z-index: 1000; background: rgba(26,20,16,0.85); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal { background: var(--cream); border-radius: 8px; width: min(90vw, 520px); padding: 3rem; position: relative; transform: translateY(20px); transition: transform 0.3s; max-height: 90vh; overflow-y: auto; }
+.modal-overlay.open .modal { transform: translateY(0); }
+.modal-close { position: absolute; top: 1.2rem; right: 1.5rem; background: none; border: none; cursor: pointer; font-size: 1.3rem; color: var(--muted); transition: color 0.2s; }
+.modal-close:hover { color: var(--blush); }
+.modal-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 400; color: var(--warm-dark); margin-bottom: 0.4rem; }
+.modal-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 2rem; }
+.form-group { margin-bottom: 1.2rem; }
+.form-group label { display: block; font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+.form-group input { width: 100%; padding: 0.85rem 1rem; border: 1px solid var(--soft); border-radius: 3px; background: white; font-family: 'Jost', sans-serif; font-size: 0.95rem; color: var(--ink); transition: border-color 0.2s; outline: none; }
+.form-group input:focus { border-color: var(--blush); box-shadow: 0 0 0 3px rgba(201,146,122,0.1); }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.order-summary { background: var(--parchment); border-radius: 4px; padding: 1.2rem; margin-bottom: 1.5rem; }
+.order-line { display: flex; justify-content: space-between; font-size: 0.88rem; padding: 0.3rem 0; }
+.order-line.total { border-top: 1px solid var(--soft); margin-top: 0.5rem; padding-top: 0.7rem; font-weight: 500; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; }
+.order-line .lbl { color: var(--muted); }
+.order-line .val { color: var(--warm-dark); }
+.success-state { display: none; text-align: center; padding: 2rem 0; }
+.success-icon { font-size: 3rem; margin-bottom: 1rem; display: block; }
+.success-title { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; color: var(--warm-dark); margin-bottom: 0.5rem; }
+.success-msg { font-size: 0.9rem; color: var(--muted); line-height: 1.7; }
+
+/* NEWSLETTER BAND */
+.newsletter-band { background: var(--warm-dark); padding: 4rem 6rem; display: flex; justify-content: space-between; align-items: center; gap: 3rem; flex-wrap: wrap; }
+.newsletter-text h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.8rem; font-weight: 300; color: var(--cream); margin-bottom: 0.4rem; }
+.newsletter-text p { font-size: 0.88rem; color: var(--muted); }
+.newsletter-form { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.newsletter-form input { padding: 0.85rem 1.2rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 3px; background: rgba(255,255,255,0.05); font-family: 'Jost', sans-serif; font-size: 0.9rem; color: var(--cream); outline: none; width: 260px; transition: border-color 0.2s; }
+.newsletter-form input::placeholder { color: var(--muted); }
+.newsletter-form input:focus { border-color: var(--blush); }
+.btn-newsletter { background: var(--blush); color: var(--cream); padding: 0.85rem 1.8rem; border: none; border-radius: 3px; font-family: 'Jost', sans-serif; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; cursor: pointer; transition: background 0.2s; white-space: nowrap; }
+.btn-newsletter:hover { background: var(--gold); }
+
+/* FOOTER */
+footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+.footer-brand { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--soft); font-weight: 300; }
+.footer-copy { font-size: 0.75rem; color: var(--muted); }
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a { font-size: 0.75rem; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--blush); }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .hero-text { padding: 5rem 2rem 4rem; }
+  .about, .buy-section { grid-template-columns: 1fr; padding: 4rem 2rem; gap: 3rem; }
+  .author-section { grid-template-columns: 1fr; padding: 4rem 2rem; text-align: center; }
+  .author-avatar { margin: 0 auto; }
+  .chapters-grid, .affirmations-grid, .test-grid, .blog-grid, .resources-grid { grid-template-columns: 1fr; }
+  .chapters-section, .affirmations-section, .testimonials, .blog-section, .resources-section { padding: 4rem 2rem; }
+  footer, .newsletter-band { padding: 2rem; flex-direction: column; text-align: center; }
+  .quote-band { padding: 2.5rem 2rem; }
+  .post-header { padding: 5rem 2rem 3rem; }
+  .post-back { left: 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">The Midnight Parent</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#chapters">Chapters</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#author">Author</a></li>
+    <li><a href="#buy" class="nav-cta" onclick="openModal(event)">Get the Book</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="stars" id="stars"></div>
+  <div class="hero-text">
+    <p class="hero-eyebrow">For parents of babies aged 0&#8211;12 months</p>
+    <h1 class="hero-title">The <em>Midnight</em><br>Parent</h1>
+    <p class="hero-subtitle">An Emotional Guide for Surviving and Thriving<br>Through Sleepless Nights with Your Newborn</p>
+    <p class="hero-author">by Shumani Phaswana</p>
+    <p class="hero-desc">Not a sleep training manual. Something more enduring: an emotional map for the terrain you are navigating right now.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openModal()">Get the Book</button>
+      <a href="#about" class="btn-secondary">Learn More</a>
+    </div>
+    <p class="hero-price">Digital Edition &#8212; <strong>$9.99</strong></p>
+  </div>
+  <div class="hero-visual">
+    <div class="book-mockup">
+      <div class="book-cover">
+        <div class="book-cover-inner">
+          <div>
+            <div class="cover-moon"></div>
+            <div class="cover-stars-mini">
+              <div class="cover-star-dot"></div><div class="cover-star-dot"></div><div class="cover-star-dot"></div>
+              <div class="cover-star-dot" style="opacity:0.3"></div><div class="cover-star-dot" style="opacity:0.15"></div>
+            </div>
+          </div>
+          <div>
+            <div class="cover-title">The <span>Midnight</span><br>Parent</div>
+            <div class="cover-subtitle">An Emotional Guide for Surviving and Thriving Through Sleepless Nights</div>
+          </div>
+          <div>
+            <div class="cover-line"></div>
+            <div class="cover-author">Shumani Phaswana</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BAND -->
+<div class="quote-band">
+  <blockquote>
+    &#8220;The most profound thing I ever did was become a parent. The hardest thing I ever did was the same.&#8221;
+    <cite>&#8212; The Midnight Parent</cite>
+  </blockquote>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-body">
+    <p class="section-label">About the Book</p>
+    <h2 class="section-title">You are not <em>broken.</em><br>You are not failing.</h2>
+    <p>The sleepless newborn period &#8212; those raw, overwhelming first twelve months &#8212; is one of the most emotionally complex experiences a human being can walk through. Most parenting books skim past this reality. This one stops and sits in it with you.</p>
+    <p>Every chapter is built around emotional truth. You will find practical tools &#8212; routines, calming strategies, guidance on building support. But above all, you will find permission. Permission to feel what you feel. Permission to ask for help. Permission to be imperfect and exhausted and deeply human.</p>
+    <p>The midnight hours are long. But you will not walk through them alone.</p>
+  </div>
+  <div class="about-visual">
+    <p class="about-quote">For every parent who has ever sat alone in the dark, holding a tiny life, running on empty &#8212; this book is your hand to hold.</p>
+  </div>
+</section>
+
+<!-- CHAPTERS -->
+<section class="chapters-section" id="chapters">
+  <div class="chapters-header">
+    <p class="section-label">Inside the Book</p>
+    <h2 class="section-title">Six Chapters of <em>Emotional Truth</em></h2>
+  </div>
+  <div class="chapters-grid">
+    <div class="chapter-card"><div class="ch-num">01</div><div class="ch-title">Understanding Your Baby&#8217;s Sleep</div><div class="ch-desc">What&#8217;s normal, what&#8217;s a phase, and what science says. Your baby&#8217;s sleep is not broken &#8212; and neither are you.</div></div>
+    <div class="chapter-card"><div class="ch-num">02</div><div class="ch-title">Your Emotions Matter</div><div class="ch-desc">Navigating anxiety, guilt, overwhelm, and the grief of exhaustion. You can love your baby completely and still find this genuinely hard.</div></div>
+    <div class="chapter-card"><div class="ch-num">03</div><div class="ch-title">Bonding Through the Night</div><div class="ch-desc">Turning the hardest hours into moments of deep connection. Bonding is not an event &#8212; it is a slow, cumulative process.</div></div>
+    <div class="chapter-card"><div class="ch-num">04</div><div class="ch-title">Gentle Routines That Work</div><div class="ch-desc">Calming strategies for your baby and for yourself. A routine is a set of gentle signals &#8212; not a rigid timetable.</div></div>
+    <div class="chapter-card"><div class="ch-num">05</div><div class="ch-title">Asking for Help</div><div class="ch-desc">Building your support system without shame or guilt. Asking for help is the bravest, most loving thing you can do.</div></div>
+    <div class="chapter-card"><div class="ch-num">06</div><div class="ch-title">The Light at the End</div><div class="ch-desc">Celebrating small wins and finding your rhythm as a family. It will change. It already is, even when you cannot see it.</div></div>
+  </div>
+</section>
+
+<!-- AFFIRMATIONS -->
+<section class="affirmations-section" id="affirmations">
+  <div class="affirmations-header">
+    <p class="section-label">30 Daily Affirmations</p>
+    <h2 class="section-title">Words for the <em style="color:var(--star)">Tired Places Inside You</em></h2>
+    <p class="affirmations-sub">A selection from the book. Read one each morning or evening.</p>
+  </div>
+  <div class="affirmations-grid">
+    <div class="affirmation-card"><div class="aff-num">01</div><div class="aff-text">I am exactly the parent my baby needs, tonight and every night.</div></div>
+    <div class="affirmation-card"><div class="aff-num">02</div><div class="aff-text">My baby does not need a perfect parent &#8212; they need a present one.</div></div>
+    <div class="affirmation-card"><div class="aff-num">03</div><div class="aff-text">My exhaustion is proof of my devotion, not evidence of my failure.</div></div>
+    <div class="affirmation-card"><div class="aff-num">07</div><div class="aff-text">Asking for help is an act of strength and self-awareness.</div></div>
+    <div class="affirmation-card"><div class="aff-num">11</div><div class="aff-text">I do not have to earn rest. Rest is something I deserve.</div></div>
+    <div class="affirmation-card"><div class="aff-num">18</div><div class="aff-text">Tonight I will do my best, and my best is genuinely good enough.</div></div>
+    <div class="affirmation-card"><div class="aff-num">24</div><div class="aff-text">I am teaching my child what love looks like &#8212; through my presence, not my perfection.</div></div>
+    <div class="affirmation-card"><div class="aff-num">28</div><div class="aff-text">Rest is not selfish. A rested parent is a better parent.</div></div>
+    <div class="affirmation-card"><div class="aff-num">30</div><div class="aff-text">I am the midnight parent. I showed up. That is everything.</div></div>
+  </div>
+  <div style="text-align:center;margin-top:3rem"><p style="color:var(--muted);font-size:0.9rem;font-style:italic">All 30 affirmations are included in the book.</p></div>
+</section>
+
+<!-- BUY -->
+<section class="buy-section" id="buy">
+  <div class="buy-text">
+    <p class="section-label">Get Your Copy</p>
+    <h2 class="section-title">Your journey through the <em>midnight hours</em> starts here.</h2>
+    <p>This book was written for the parent in the rocking chair at 3am. For every exhausted, devoted, overwhelmed, deeply loving person doing the most important work of their life.</p>
+    <ul class="includes-list">
+      <li>Full digital edition &#8212; all 6 chapters</li>
+      <li>30 daily affirmations for tired parents</li>
+      <li>Curated recommended resources</li>
+      <li>Calming strategies for baby and parent</li>
+      <li>Instant PDF download after purchase</li>
+    </ul>
+  </div>
+  <div class="buy-card">
+    <div class="buy-card-inner">
+      <p class="buy-card-label">Digital Edition</p>
+      <h3 class="buy-card-title">The Midnight Parent</h3>
+      <p class="buy-card-format">PDF &middot; Instant Download</p>
+      <div class="price-display"><span class="price-currency">$</span><span class="price-amount">9.99</span></div>
+      <p class="price-note">One-time purchase One-time purchase &middot; No subscriptionmiddot; No subscription</p>
+      <div class="buy-divider"></div>
+      <ul class="buy-perks">
+        <li>Readable on any device</li>
+        <li>Sent directly to your email</li>
+        <li>Share with your co-parent</li>
+      </ul>
+      <button class="btn-buy" onclick="openModal()">Purchase Now</button>
+      <p class="secure-note">&#128274; Secure checkout &middot; Instant delivery</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHOR -->
+<section class="author-section" id="author">
+  <div class="author-avatar">S</div>
+  <div>
+    <p class="section-label">About the Author</p>
+    <h2 class="author-name">Shumani Phaswana</h2>
+    <div class="author-bio">
+      <p>Shumani Phaswana is the author of <em>The Midnight Parent</em>, a guide born from the belief that the emotional experience of new parenthood deserves as much attention as any practical sleep schedule or feeding routine.</p>
+      <p>Written with honesty, warmth, and deep respect for the reality of those first twelve months, this book offers something most parenting resources don&#8217;t: permission to be fully, imperfectly human.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="testimonials-header">
+    <p class="section-label">What Readers Say</p>
+    <h2 class="section-title">Words from <em>Midnight Parents</em></h2>
+  </div>
+  <div class="test-grid">
+    <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="test-text">This book made me cry in the best possible way. I finally felt seen. Not judged, not told what to do &#8212; just understood.</p><p class="test-author">&#8212; Nomsa T., mother of a 4-month-old</p></div>
+    <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="test-text">I read this at 2am with my baby on my chest. I honestly felt less alone. Every new parent needs this book.</p><p class="test-author">&#8212; Ruan V., father of twins</p></div>
+    <div class="test-card"><div class="test-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><p class="test-text">The chapter on emotions was exactly what I needed to hear. No one tells you about the guilt, the rage, the grief. She does.</p><p class="test-author">&#8212; Aisha M., mother of a 7-month-old</p></div>
+  </div>
+</section>
+
+<!-- ═══ BLOG ═══ -->
+<section class="blog-section" id="blog">
+  <div class="blog-header">
+    <p class="section-label">The Midnight Blog</p>
+    <h2 class="section-title">Words for the <em>3am Hours</em></h2>
+    <p style="color:var(--muted);font-size:0.9rem;max-width:500px;margin:0 auto">New articles every week &#8212; on the emotions, the sleep, and the humanity of new parenthood.</p>
+  </div>
+  <div class="blog-grid">
+    <div class="blog-card" onclick="openPost('post1')">
+      <div class="blog-card-img emotion">&#127769;</div>
+      <div class="blog-card-body">
+        <p class="blog-tag">Emotional Health</p>
+        <h3 class="blog-card-title">The Emotion Nobody Warned You About: Anticipatory Grief in New Parenthood</h3>
+        <p class="blog-card-excerpt">You haven&#8217;t lost anything &#8212; so why does it feel like grief? Here&#8217;s what&#8217;s actually happening in those early weeks.</p>
+        <div class="blog-meta"><span>Shumani Phaswana</span><span>5 min read</span></div>
+        <a class="blog-read-more">Read Article &#8594;</a>
+      </div>
+    </div>
+    <div class="blog-card" onclick="openPost('post2')">
+      <div class="blog-card-img sleep">&#127774;</div>
+      <div class="blog-card-body">
+        <p class="blog-tag">Baby Sleep</p>
+        <h3 class="blog-card-title">Why Your Baby Wakes Every 45 Minutes (And Why That&#8217;s Actually Normal)</h3>
+        <p class="blog-card-excerpt">Understanding your newborn&#8217;s sleep cycles changes everything. The science behind why short stretches are by design, not a problem.</p>
+        <div class="blog-meta"><span>Shumani Phaswana</span><span>4 min read</span></div>
+        <a class="blog-read-more">Read Article &#8594;</a>
+      </div>
+    </div>
+    <div class="blog-card" onclick="openPost('post3')">
+      <div class="blog-card-img mixed">&#10024;</div>
+      <div class="blog-card-body">
+        <p class="blog-tag">Wellbeing</p>
+        <h3 class="blog-card-title">Box Breathing at 3am: The Simple Tool That Helps You Stay Calm When Your Baby Won&#8217;t Sleep</h3>
+        <p class="blog-card-excerpt">Your calm is your baby&#8217;s calm. This one breathing technique activates your nervous system&#8217;s rest response in under two minutes.</p>
+        <div class="blog-meta"><span>Shumani Phaswana</span><span>3 min read</span></div>
+        <a class="blog-read-more">Read Article &#8594;</a>
+      </div>
+    </div>
+  </div>
+  <div class="blog-cta">
+    <p>New articles published every week. Subscribe below so you never miss one.</p>
+  </div>
+</section>
+
+<!-- RESOURCES -->
+<section class="resources-section" id="resources">
+  <div class="resources-header">
+    <p class="section-label">From the Book</p>
+    <h2 class="section-title">Recommended <em>Resources</em></h2>
+  </div>
+  <div class="resources-grid">
+    <div class="resource-group">
+      <h4>Books</h4>
+      <div class="resource-item"><span class="r-title">The Happiest Baby on the Block</span><div class="r-desc">Harvey Karp, M.D. &#8212; Calming your newborn using the 5 S&#8217;s.</div></div>
+      <div class="resource-item"><span class="r-title">The Fourth Trimester</span><div class="r-desc">Kimberly Ann Johnson &#8212; Healing and recovery after birth.</div></div>
+      <div class="resource-item"><span class="r-title">Good Moms Have Scary Thoughts</span><div class="r-desc">Karen Kleiman &#8212; Intrusive thoughts in new parenthood.</div></div>
+    </div>
+    <div class="resource-group">
+      <h4>Mental Health Support</h4>
+      <div class="resource-item"><a href="https://postpartum.net" target="_blank" class="r-title">Postpartum Support International</a><div class="r-desc">Resources, helplines, and provider directories.</div></div>
+      <div class="resource-item"><a href="https://pandasfoundation.org.uk" target="_blank" class="r-title">PANDAS Foundation</a><div class="r-desc">UK-based support for postnatal depression and anxiety.</div></div>
+      <div class="resource-item"><a href="https://panda.org.au" target="_blank" class="r-title">PANDA</a><div class="r-desc">Support for perinatal mental health challenges.</div></div>
+    </div>
+    <div class="resource-group">
+      <h4>Sleep &amp; Parenting</h4>
+      <div class="resource-item"><a href="https://llli.org" target="_blank" class="r-title">La Leche League International</a><div class="r-desc">Breastfeeding support with a parent-centred approach.</div></div>
+      <div class="resource-item"><a href="https://basisonline.org.uk" target="_blank" class="r-title">BASIS</a><div class="r-desc">Research-based, non-judgmental information on infant sleep.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter-band">
+  <div class="newsletter-text">
+    <h3>New articles every week.</h3>
+    <p>Get them straight to your inbox &#8212; no spam, just words for tired parents.</p>
+  </div>
+  <div class="newsletter-form">
+    <input type="email" placeholder="your@email.com" id="nl-email">
+    <button class="btn-newsletter" onclick="handleNewsletter()">Subscribe</button>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">The Midnight Parent &#8212; Shumani Phaswana</div>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#chapters">Chapters</a>
+    <a href="#blog">Blog</a>
+    <a href="#buy" onclick="openModal(event)">Buy</a>
+  </div>
+  <div class="footer-copy">&copy; 2024 Shumani Phaswana. All rights reserved.</div>
+</footer>
+
+<!-- PURCHASE MODAL -->
+<div class="modal-overlay" id="purchaseModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeModal()">&#10005;</button>
+    <div id="form-state">
+      <h2 class="modal-title">Get Your Copy</h2>
+      <p class="modal-sub">PDF delivered to your inbox instantly after purchase.</p>
+      <div class="order-summary">
+        <div class="order-line"><span class="lbl">The Midnight Parent (Digital PDF)</span><span class="val">$9.99</span></div>
+        <div class="order-line total"><span class="lbl">Total</span><span class="val">$9.99</span></div>
+      </div>
+      <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" id="field-name"></div>
+      <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" id="field-email"></div>
+      <div class="form-group"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" id="field-card" oninput="formatCard(this)"></div>
+      <div class="form-row">
+        <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM / YY" maxlength="7" id="field-expiry" oninput="formatExpiry(this)"></div>
+        <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="3" id="field-cvv"></div>
+      </div>
+      <button class="btn-buy" onclick="handlePurchase()">Complete Purchase &#8212; $9.99</button>
+      <p class="secure-note">&#128274; Demo checkout &#8212; connect PayFast or PayStack to go live</p>
+    </div>
+    <div class="success-state" id="success-state">
+      <span class="success-icon">&#127769;</span>
+      <h2 class="success-title">You&#8217;re all set!</h2>
+      <p class="success-msg">Thank you for your purchase.<br>Your download link has been sent to your email.<br><br><em>&#8220;I am the midnight parent. I showed up. That is everything.&#8221;</em></p>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG POST OVERLAY -->
+<div class="post-overlay" id="postOverlay">
+  <div class="post-header">
+    <button class="post-back" onclick="closePost()">&#8592; Back to blog</button>
+    <p class="post-tag" id="post-tag"></p>
+    <h1 class="post-title" id="post-title"></h1>
+    <p class="post-byline">By Shumani Phaswana</p>
+  </div>
+  <div class="post-body" id="post-body"></div>
+</div>
+
+<script>
+// ── Stars ──
+var sc = document.getElementById('stars');
+for (var i = 0; i < 70; i++) {
+  var s = document.createElement('div'); s.className = 'star';
+  var sz = Math.random()*2.5+0.5;
+  s.style.cssText = 'width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100)+'%;top:'+(Math.random()*100)+'%;--dur:'+(Math.random()*3+2).toFixed(1)+'s;--delay:'+(Math.random()*6).toFixed(1)+'s;--max-op:'+(Math.random()*0.7+0.2).toFixed(2)+';';
+  sc.appendChild(s);
+}
+
+// ── Modal ──
+function openModal(e) { if(e) e.preventDefault(); document.getElementById('purchaseModal').classList.add('open'); document.body.style.overflow='hidden'; }
+function closeModal() {
+  document.getElementById('purchaseModal').classList.remove('open'); document.body.style.overflow='';
+  setTimeout(function(){ document.getElementById('form-state').style.display='block'; document.getElementById('success-state').style.display='none'; ['field-name','field-email','field-card','field-expiry','field-cvv'].forEach(function(id){ document.getElementById(id).value=''; }); },300);
+}
+document.getElementById('purchaseModal').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
+function formatCard(el){ var v=el.value.replace(/\D/g,'').substring(0,16); el.value=v.replace(/(.{4})/g,'$1 ').trim(); }
+function formatExpiry(el){ var v=el.value.replace(/\D/g,'').substring(0,4); if(v.length>=2) v=v.substring(0,2)+' / '+v.substring(2); el.value=v; }
+function handlePurchase(){
+  var n=document.getElementById('field-name').value.trim(), e=document.getElementById('field-email').value.trim(),
+      c=document.getElementById('field-card').value.replace(/\s/g,''), x=document.getElementById('field-expiry').value.trim(), v=document.getElementById('field-cvv').value.trim();
+  if(!n||!e||c.length<16||x.length<7||v.length<3){ alert('Please fill in all fields correctly.'); return; }
+  // GA purchase event
+  if(typeof gtag!=='undefined') gtag('event','purchase',{currency:'USD',value:9.99,items:[{item_name:'The Midnight Parent'}]});
+  document.getElementById('form-state').style.display='none'; document.getElementById('success-state').style.display='block';
+}
+
+// ── Newsletter ──
+function handleNewsletter(){
+  var e=document.getElementById('nl-email').value.trim();
+  if(!e||!e.includes('@')){ alert('Please enter a valid email address.'); return; }
+  if(typeof gtag!=='undefined') gtag('event','newsletter_signup',{email:e});
+  document.getElementById('nl-email').value=''; alert('You\'re subscribed! Watch your inbox for new articles.');
+}
+
+// ── Blog Posts ──
+var posts = {
+  post1: {
+    tag: 'Emotional Health',
+    title: 'The Emotion Nobody Warned You About: Anticipatory Grief in New Parenthood',
+    body: '<p>You haven&#8217;t lost anything in the traditional sense. Your baby is here, safe and warm. The love is real and enormous. So why does something feel like grief?</p><h2>What is anticipatory grief?</h2><p>Many new parents experience a disorienting form of grief in the early weeks and months &#8212; not for a person, but for a self. Your pre-parent identity. Your freedom of movement. The relationship with your partner as it used to be. Your body as you knew it. Your sleep.</p><p>This is grief. And it is valid.</p><blockquote>Grieving your pre-parent self while loving your baby is not a contradiction &#8212; it is a sign of processing a massive transition.</blockquote><h2>Why nobody talks about it</h2><p>There is an unspoken cultural pressure on new parents to feel only gratitude. You wanted this, the message goes. You should be happy. But gratitude and grief are not opposites. The human heart is large enough to hold both simultaneously.</p><p>When parents feel this unnamed sadness, many assume something is wrong with them. They carry it silently, adding shame to an already heavy load. The reality is that almost every new parent experiences some version of this &#8212; and naming it is the first step toward moving through it.</p><h2>What to do with it</h2><p>First: let yourself feel it. Acknowledge that something significant has changed. Give the feeling a name. Talk to your partner, a trusted friend, or a therapist who understands the perinatal period.</p><p>Second: hold it alongside the love. These feelings do not cancel each other out. You are not failing as a parent by missing your former life. You are human.</p><p>Third: know that the identity you are building now &#8212; as a parent &#8212; is as real and full as the one that came before. It just takes time to feel like home.</p><div class="post-cta-box"><p>&#8220;You are not just surviving this season. You are building something.&#8221;</p><button class="btn-primary" onclick="closePost();openModal()">Get the Full Book &#8212; $9.99</button></div>'
+  },
+  post2: {
+    tag: 'Baby Sleep',
+    title: 'Why Your Baby Wakes Every 45 Minutes (And Why That\'s Actually Normal)',
+    body: '<p>It is one of the most disorienting discoveries of new parenthood: you put a sleeping baby down, tiptoe out of the room, and exactly 45 minutes later &#8212; they are awake. Every time. Like clockwork.</p><p>This is not coincidence. And it is not a problem with your baby, or with your parenting.</p><h2>The architecture of newborn sleep</h2><p>Adult sleep cycles last roughly 90 minutes. Newborn sleep cycles last approximately 45 minutes. Within each cycle, babies spend significantly more time in light, active sleep than adults do. They surface to a near-waking state at the end of each cycle &#8212; and unlike adults, they haven&#8217;t yet learned to link cycles together and drift back under.</p><p>This is not a design flaw. Light sleep in newborns is protective. It allows them to rouse quickly if they are cold, hungry, or in need of comfort. The sensitivity that disrupts your night is, in the earliest months, keeping your baby safe.</p><blockquote>Your baby&#8217;s sleep is not broken. And neither are you.</blockquote><h2>When does it get better?</h2><p>Sleep architecture matures over time. By around 3 to 4 months, many babies begin to consolidate sleep cycles &#8212; though this also coincides with the well-known 4-month sleep regression, when the brain undergoes its first major developmental shift in sleep structure.</p><p>Between 6 and 12 months, most babies begin to sleep more predictably. But every baby moves at their own pace, and comparison to other people&#8217;s children is rarely useful.</p><h2>What you can do now</h2><p>Understanding the 45-minute cycle can help you respond with less panic. When your baby stirs at that mark, give them a moment before rushing in &#8212; sometimes they will resettle on their own. A consistent wind-down routine, practiced from around 3 to 4 months, also helps signal that sleep is coming and can improve how quickly babies settle.</p><p>And on the hardest nights: this phase is temporary. It already is changing, even when you cannot see it.</p><div class="post-cta-box"><p>&#8220;Comparison is the thief of joy &#8212; and in the early months, it is the thief of sleep too.&#8221;</p><button class="btn-primary" onclick="closePost();openModal()">Get the Full Book &#8212; $9.99</button></div>'
+  },
+  post3: {
+    tag: 'Wellbeing',
+    title: 'Box Breathing at 3am: The Simple Tool That Helps You Stay Calm When Your Baby Won\'t Sleep',
+    body: '<p>It is the middle of the night. You have been awake for hours. Your baby is crying and you have tried everything. Your body is flooded with stress hormones, your mind is racing, and somewhere in you, something is starting to crack.</p><p>This is the moment for box breathing.</p><h2>Why it works</h2><p>When we are stressed or sleep-deprived, our nervous system activates the fight-or-flight response. Heart rate increases. Breathing becomes shallow. Stress hormones flood the body. Box breathing directly counteracts this by activating the parasympathetic nervous system &#8212; the rest-and-digest state &#8212; through deliberate breath control.</p><p>It takes under two minutes. You can do it while holding your baby.</p><h2>How to do it</h2><p><strong>Inhale</strong> slowly for 4 counts. <strong>Hold</strong> for 4 counts. <strong>Exhale</strong> for 4 counts. <strong>Hold</strong> for 4 counts. Repeat three times.</p><p>That&#8217;s it. The counting gives your mind something to anchor to, interrupting the spiral of anxious thought. The extended exhale activates the vagus nerve, which signals safety to your nervous system.</p><blockquote>Your calm is your baby&#8217;s calm. When you regulate your own nervous system, you help regulate theirs.</blockquote><h2>Other tools for the hardest moments</h2><p>The body scan: before getting up for a night feed, spend 30 seconds consciously releasing tension from your head to your feet. You will get up more resourced.</p><p>One good thing: when nights feel endless, find one small anchor &#8212; the warmth of your baby&#8217;s weight, a cup of tea, a quiet house. This is not toxic positivity. It is survival.</p><p>And if you are consistently finding that anxiety is preventing you from resting even when your baby sleeps &#8212; that is worth speaking to someone about. Postpartum anxiety is common, underdiagnosed, and very treatable.</p><div class="post-cta-box"><p>&#8220;Feeling your feelings is not the same as acting on them. You can be overwhelmed and still be a good parent.&#8221;</p><button class="btn-primary" onclick="closePost();openModal()">Get the Full Book &#8212; $9.99</button></div>'
+  }
+};
+
+function openPost(id) {
+  var p = posts[id]; if(!p) return;
+  document.getElementById('post-tag').textContent = p.tag;
+  document.getElementById('post-title').textContent = p.title;
+  document.getElementById('post-body').innerHTML = p.body;
+  document.getElementById('postOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  window.scrollTo(0,0);
+  if(typeof gtag!=='undefined') gtag('event','blog_view',{post_id:id,post_title:p.title});
+}
+function closePost() {
+  document.getElementById('postOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
+
+</body>
+</html>
