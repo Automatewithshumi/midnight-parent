@@ -458,11 +458,30 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
   </div>
   <div class="buy-card">
     <div class="buy-card-inner">
-      <p class="buy-card-label">Digital Edition</p>
-      <h3 class="buy-card-title">The Midnight Parent</h3>
-      <p class="buy-card-format">PDF &middot; Instant Download</p>
-      <div class="price-display"><span class="price-currency">$</span><span class="price-amount">9.99</span></div>
-      <p class="price-note">One-time purchase One-time purchase &middot; No subscriptionmiddot; No subscription</p>
+      <!-- Book cover in buy card -->
+      <div style="display:flex;gap:1.5rem;align-items:flex-start;margin-bottom:1.5rem;">
+        <svg viewBox="0 0 420 560" xmlns="http://www.w3.org/2000/svg" style="width:90px;flex-shrink:0;border-radius:2px;box-shadow:0 8px 24px rgba(0,0,0,0.4);">
+          <rect width="420" height="560" fill="#f5ede0"/>
+          <rect x="10" y="10" width="400" height="540" fill="none" stroke="#d4b896" stroke-width="1.2" rx="2"/>
+          <rect x="17" y="17" width="386" height="526" fill="none" stroke="#d4b896" stroke-width="0.5" rx="1"/>
+          <text x="210" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#5c3317" letter-spacing="0.5">The Midnight</text>
+          <text x="210" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#5c3317" letter-spacing="0.5">Parent</text>
+          <line x1="80" y1="158" x2="340" y2="158" stroke="#b8935a" stroke-width="0.8"/>
+          <text x="210" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#7a4e2d">An Emotional Guide for</text>
+          <text x="210" y="202" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#7a4e2d">Surviving and Thriving</text>
+          <text x="210" y="220" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#7a4e2d">Through Sleepless Nights</text>
+          <text x="210" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#b8935a" letter-spacing="6">* * *</text>
+          <text x="210" y="275" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#5c3317">by Shumani Phaswana</text>
+          <text x="210" y="294" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-style="italic" fill="#9a7060">For parents of babies aged 0&#8211;12 months</text>
+        </svg>
+        <div>
+          <p class="buy-card-label">Digital Edition</p>
+          <h3 class="buy-card-title">The Midnight Parent</h3>
+          <p class="buy-card-format">PDF &middot; Instant Download</p>
+          <div class="price-display"><span class="price-currency">$</span><span class="price-amount">9.99</span></div>
+          <p class="price-note">One-time purchase &middot; No subscription</p>
+        </div>
+      </div>
       <div class="buy-divider"></div>
       <ul class="buy-perks">
         <li>Readable on any device</li>
