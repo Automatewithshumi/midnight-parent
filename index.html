@@ -597,7 +597,20 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
     <a href="https://paystack.shop/pay/u1zxevtri-" target="_blank">Buy</a>
   </div>
   <div class="footer-copy">&copy; 2024 Shumani Phaswana. All rights reserved.</div>
+  <div class="footer-policy-links">
+    <a href="#" onclick="openPolicy('refund', event)">Refund Policy</a>
+    <a href="#" onclick="openPolicy('privacy', event)">Privacy Policy</a>
+    <a href="#" onclick="openPolicy('contact', event)">Contact</a>
+  </div>
 </footer>
+
+<!-- POLICY MODAL -->
+<div class="modal-overlay" id="policyModal">
+  <div class="modal" style="max-width:600px;">
+    <button class="modal-close" onclick="closePolicy()">&#10005;</button>
+    <div id="policy-content"></div>
+  </div>
+</div>
 
 <!-- PURCHASE MODAL -->
 <div class="modal-overlay" id="purchaseModal">
