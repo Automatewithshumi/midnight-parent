@@ -1,74 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
   <url>
     <loc>https://midnight-parent.vercel.app/</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- About section -->
   <url>
     <loc>https://midnight-parent.vercel.app/#about</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Chapters section -->
   <url>
     <loc>https://midnight-parent.vercel.app/#chapters</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
-  <!-- Blog section -->
   <url>
     <loc>https://midnight-parent.vercel.app/#blog</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Blog post 1 -->
-  <url>
-    <loc>https://midnight-parent.vercel.app/#post1</loc>
-    <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Blog post 2 -->
-  <url>
-    <loc>https://midnight-parent.vercel.app/#post2</loc>
-    <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Blog post 3 -->
-  <url>
-    <loc>https://midnight-parent.vercel.app/#post3</loc>
-    <lastmod>2024-12-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Buy section -->
   <url>
     <loc>https://midnight-parent.vercel.app/#buy</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Author section -->
   <url>
     <loc>https://midnight-parent.vercel.app/#author</loc>
-    <lastmod>2024-12-01</lastmod>
+    <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

@@ -1,12 +1,21 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
   "routes": [
+    {
+      "src": "/sitemap.xml",
+      "dest": "/sitemap.xml",
+      "headers": {
+        "Content-Type": "application/xml"
+      }
+    },
+    {
+      "src": "/robots.txt",
+      "dest": "/robots.txt"
+    },
+    {
+      "src": "/the_midnight_parent.pdf",
+      "dest": "/the_midnight_parent.pdf"
+    },
     {
       "src": "/(.*)",
       "dest": "/index.html"
