@@ -49,8 +49,8 @@
   "inLanguage": "en",
   "offers": {
     "@type": "Offer",
-    "price": "9.99",
-    "priceCurrency": "USD",
+    "price": "162",
+    "priceCurrency": "ZAR",
     "availability": "https://schema.org/InStock"
   },
   "publisher": { "@type": "Person", "name": "Shumani Phaswana" }
@@ -403,7 +403,7 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
       <button class="btn-primary" onclick="buyNow()">Get the Book</button>
       <a href="#about" class="btn-secondary">Learn More</a>
     </div>
-    <p class="hero-price">Digital Edition &#8212; <strong>$9.99</strong></p>
+    <p class="hero-price">Digital Edition &#8212; <strong>R162 / ~$9 USD</strong></p>
   </div>
   <div class="hero-visual">
     <div class="book-mockup">
@@ -533,7 +533,7 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
           <p class="buy-card-label">Digital Edition</p>
           <h3 class="buy-card-title">The Midnight Parent</h3>
           <p class="buy-card-format">PDF &middot; Instant Download</p>
-          <div class="price-display"><span class="price-currency">$</span><span class="price-amount">9.99</span></div>
+          <div class="price-display"><span class="price-currency">R</span><span class="price-amount">162</span></div><p style="font-size:0.8rem;color:var(--gold);margin-top:-0.5rem;margin-bottom:0.5rem;">~$9 USD &middot; International cards accepted</p>
           <p class="price-note">One-time purchase &middot; No subscription</p>
         </div>
       </div>
@@ -695,7 +695,7 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
     <p class="modal-sub" style="text-align:center;">Digital PDF &middot; Instant delivery after payment</p>
     <div class="order-summary">
       <div class="order-line"><span class="lbl">The Midnight Parent (Digital PDF)</span><span class="val">$9.99</span></div>
-      <div class="order-line total"><span class="lbl">Total</span><span class="val">$9.99</span></div>
+      <div class="order-line total"><span class="lbl">Total</span><span class="val">R162 (~$9 USD)</span></div>
     </div>
     <div style="background:var(--parchment);border-radius:4px;padding:1.2rem;margin-bottom:1.5rem;">
       <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;margin:0;">
@@ -706,7 +706,7 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
       </p>
     </div>
     <a href="https://paystack.shop/pay/the-midnight-parent" target="_blank" class="btn-buy" onclick="trackPurchase()">
-      Pay Securely with Paystack &#8212; $9.99
+      Pay Securely with Paystack &#8212; R162
     </a>
     <p class="secure-note" style="margin-top:1rem;">&#128274; Powered by Paystack &middot; 256-bit SSL encryption</p>
   </div>
@@ -781,14 +781,14 @@ function buyNow(e) {
   if(e) e.preventDefault();
   document.getElementById('purchaseModal').classList.add('open');
   document.body.style.overflow='hidden';
-  if(typeof gtag!=='undefined') gtag('event','begin_checkout',{currency:'USD',value:9.99,items:[{item_name:'The Midnight Parent'}]});
+  if(typeof gtag!=='undefined') gtag('event','begin_checkout',{currency:'ZAR',value:162,items:[{item_name:'The Midnight Parent'}]});
 }
 function closeModal() {
   document.getElementById('purchaseModal').classList.remove('open');
   document.body.style.overflow='';
 }
 function trackPurchase() {
-  if(typeof gtag!=='undefined') gtag('event','purchase',{currency:'USD',value:9.99,items:[{item_name:'The Midnight Parent'}]});
+  if(typeof gtag!=='undefined') gtag('event','purchase',{currency:'ZAR',value:162,items:[{item_name:'The Midnight Parent'}]});
 }
 document.getElementById('purchaseModal').addEventListener('click',function(e){ if(e.target===this) closeModal(); });
 
@@ -850,7 +850,7 @@ function checkPurchase() {
       s.style.cssText = 'width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100)+'%;top:'+(Math.random()*100)+'%;--dur:'+(Math.random()*3+2).toFixed(1)+'s;--delay:'+(Math.random()*6).toFixed(1)+'s;--max-op:'+(Math.random()*0.7+0.2).toFixed(2)+';';
       ds.appendChild(s);
     }
-    if(typeof gtag !== 'undefined') gtag('event','purchase_complete',{currency:'USD',value:9.99,items:[{item_name:'The Midnight Parent'}]});
+    if(typeof gtag !== 'undefined') gtag('event','purchase_complete',{currency:'ZAR',value:162,items:[{item_name:'The Midnight Parent'}]});
     // Clean URL
     window.history.replaceState({}, document.title, '/');
   }
