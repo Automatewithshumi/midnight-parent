@@ -684,31 +684,31 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
 </div>
 
 <!-- PURCHASE MODAL -->
+<!-- PAYSTACK CHECKOUT MODAL -->
 <div class="modal-overlay" id="purchaseModal">
   <div class="modal">
     <button class="modal-close" onclick="closeModal()">&#10005;</button>
-    <div id="form-state">
-      <h2 class="modal-title">Get Your Copy</h2>
-      <p class="modal-sub">PDF delivered to your inbox instantly after purchase.</p>
-      <div class="order-summary">
-        <div class="order-line"><span class="lbl">The Midnight Parent (Digital PDF)</span><span class="val">$9.99</span></div>
-        <div class="order-line total"><span class="lbl">Total</span><span class="val">$9.99</span></div>
-      </div>
-      <div class="form-group"><label>Full Name</label><input type="text" placeholder="Your name" id="field-name"></div>
-      <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com" id="field-email"></div>
-      <div class="form-group"><label>Card Number</label><input type="text" placeholder="1234 5678 9012 3456" maxlength="19" id="field-card" oninput="formatCard(this)"></div>
-      <div class="form-row">
-        <div class="form-group"><label>Expiry</label><input type="text" placeholder="MM / YY" maxlength="7" id="field-expiry" oninput="formatExpiry(this)"></div>
-        <div class="form-group"><label>CVV</label><input type="text" placeholder="123" maxlength="3" id="field-cvv"></div>
-      </div>
-      <button class="btn-buy" onclick="handlePurchase()">Complete Purchase &#8212; $9.99</button>
-      <p class="secure-note">&#128274; Demo checkout &#8212; connect PayFast or PayStack to go live</p>
+    <div style="text-align:center;padding:0.5rem 0 1rem;">
+      <span style="font-size:2.5rem;">&#127769;</span>
     </div>
-    <div class="success-state" id="success-state">
-      <span class="success-icon">&#127769;</span>
-      <h2 class="success-title">You&#8217;re all set!</h2>
-      <p class="success-msg">Thank you for your purchase.<br>Your download link has been sent to your email.<br><br><em>&#8220;I am the midnight parent. I showed up. That is everything.&#8221;</em></p>
+    <h2 class="modal-title" style="text-align:center;">The Midnight Parent</h2>
+    <p class="modal-sub" style="text-align:center;">Digital PDF &middot; Instant delivery after payment</p>
+    <div class="order-summary">
+      <div class="order-line"><span class="lbl">The Midnight Parent (Digital PDF)</span><span class="val">$9.99</span></div>
+      <div class="order-line total"><span class="lbl">Total</span><span class="val">$9.99</span></div>
     </div>
+    <div style="background:var(--parchment);border-radius:4px;padding:1.2rem;margin-bottom:1.5rem;">
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.8;margin:0;">
+        &#10003;&nbsp; Secure payment via Paystack<br>
+        &#10003;&nbsp; All major cards accepted<br>
+        &#10003;&nbsp; PDF delivered instantly after payment<br>
+        &#10003;&nbsp; Readable on any device
+      </p>
+    </div>
+    <a href="https://paystack.shop/pay/u1zxevtri-" target="_blank" class="btn-buy" onclick="trackPurchase()">
+      Pay Securely with Paystack &#8212; $9.99
+    </a>
+    <p class="secure-note" style="margin-top:1rem;">&#128274; Powered by Paystack &middot; 256-bit SSL encryption</p>
   </div>
 </div>
 
