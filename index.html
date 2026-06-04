@@ -303,6 +303,61 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
 .footer-policy-links a:hover { color: var(--blush); }
 
 /* RESPONSIVE */
+/* ═══ DOWNLOAD SUCCESS PAGE ═══ */
+.download-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: var(--night);
+  display: none; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 2rem;
+}
+.download-overlay.show { display: flex; }
+.download-overlay::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, rgba(184,147,90,0.15) 0%, transparent 65%);
+  pointer-events: none;
+}
+.dl-stars { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.dl-inner { position: relative; z-index: 2; max-width: 560px; }
+.dl-moon { font-size: 3.5rem; margin-bottom: 1rem; display: block; animation: float 4s ease-in-out infinite; }
+.dl-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300; color: var(--cream);
+  line-height: 1.2; margin-bottom: 0.8rem;
+}
+.dl-title em { color: var(--star); font-style: italic; }
+.dl-sub {
+  font-size: 1rem; font-weight: 300;
+  color: var(--soft); line-height: 1.7;
+  margin-bottom: 2.5rem;
+}
+.dl-book {
+  margin: 0 auto 2rem;
+  display: inline-block;
+}
+.dl-btn {
+  display: inline-block;
+  background: var(--blush); color: var(--cream);
+  padding: 1.1rem 2.8rem; text-decoration: none;
+  font-size: 0.85rem; letter-spacing: 0.14em; text-transform: uppercase;
+  border-radius: 3px; transition: all 0.3s;
+  font-family: 'Jost', sans-serif; border: none; cursor: pointer;
+  margin-bottom: 1rem;
+}
+.dl-btn:hover { background: var(--gold); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(184,147,90,0.4); }
+.dl-note { font-size: 0.78rem; color: var(--muted); margin-bottom: 2rem; }
+.dl-affirmation {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem; font-style: italic;
+  color: var(--star); opacity: 0.8;
+  max-width: 400px; margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+.dl-back { font-size: 0.75rem; color: var(--muted); text-decoration: none; letter-spacing: 0.1em; text-transform: uppercase; transition: color 0.2s; }
+.dl-back:hover { color: var(--blush); }
+
 @media (max-width: 900px) {
   nav { padding: 1rem 1.5rem; }
   .nav-links { display: none; }
@@ -668,6 +723,49 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
   <div class="post-body" id="post-body"></div>
 </div>
 
+<!-- ═══ DOWNLOAD SUCCESS OVERLAY ═══ -->
+<div class="download-overlay" id="downloadOverlay">
+  <div class="dl-stars" id="dlStars"></div>
+  <div class="dl-inner">
+    <span class="dl-moon">&#127769;</span>
+    <h1 class="dl-title">Thank you for your<br><em>purchase!</em></h1>
+    <p class="dl-sub">
+      Your copy of <strong style="color:var(--star)">The Midnight Parent</strong> is ready.<br>
+      Click the button below to download your PDF.
+    </p>
+
+    <!-- Book cover preview -->
+    <div class="dl-book">
+      <svg viewBox="0 0 420 560" xmlns="http://www.w3.org/2000/svg" style="width:120px;border-radius:3px;box-shadow:0 12px 40px rgba(0,0,0,0.5);margin-bottom:1.5rem;">
+        <rect width="420" height="560" fill="#f5ede0"/>
+        <rect x="10" y="10" width="400" height="540" fill="none" stroke="#d4b896" stroke-width="1.2" rx="2"/>
+        <rect x="17" y="17" width="386" height="526" fill="none" stroke="#d4b896" stroke-width="0.5" rx="1"/>
+        <text x="210" y="98" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#5c3317">The Midnight</text>
+        <text x="210" y="140" text-anchor="middle" font-family="Georgia,serif" font-size="36" font-weight="700" fill="#5c3317">Parent</text>
+        <line x1="80" y1="158" x2="340" y2="158" stroke="#b8935a" stroke-width="0.8"/>
+        <text x="210" y="184" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#7a4e2d">An Emotional Guide for</text>
+        <text x="210" y="202" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#7a4e2d">Surviving and Thriving</text>
+        <text x="210" y="220" text-anchor="middle" font-family="Georgia,serif" font-size="13" font-style="italic" fill="#7a4e2d">Through Sleepless Nights</text>
+        <text x="210" y="250" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#b8935a" letter-spacing="6">* * *</text>
+        <text x="210" y="275" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#5c3317">by Shumani Phaswana</text>
+        <text x="210" y="294" text-anchor="middle" font-family="Georgia,serif" font-size="10" font-style="italic" fill="#9a7060">For parents of babies aged 0&#8211;12 months</text>
+      </svg>
+    </div>
+
+    <a href="https://midnight-parent.vercel.app/the_midnight_parent.pdf"
+       download="The-Midnight-Parent-by-Shumani-Phaswana.pdf"
+       class="dl-btn"
+       onclick="trackDownload()">
+      &#11015; Download Your Book
+    </a>
+    <p class="dl-note">PDF &middot; Opens on any device &middot; Yours to keep forever</p>
+    <p class="dl-affirmation">
+      &#8220;You are the midnight parent. And you are magnificent.&#8221;
+    </p>
+    <a href="/" class="dl-back">&#8592; Return to website</a>
+  </div>
+</div>
+
 <script>
 // ── Stars ──
 var sc = document.getElementById('stars');
@@ -735,6 +833,33 @@ function closePost() {
   document.getElementById('postOverlay').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+// ── Purchase detection ──
+function checkPurchase() {
+  var params = new URLSearchParams(window.location.search);
+  if (params.get('purchased') === 'true') {
+    var overlay = document.getElementById('downloadOverlay');
+    overlay.classList.add('show');
+    document.body.style.overflow = 'hidden';
+    // Add stars to download overlay
+    var ds = document.getElementById('dlStars');
+    for (var i = 0; i < 60; i++) {
+      var s = document.createElement('div');
+      s.className = 'star';
+      var sz = Math.random()*2.5+0.5;
+      s.style.cssText = 'width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100)+'%;top:'+(Math.random()*100)+'%;--dur:'+(Math.random()*3+2).toFixed(1)+'s;--delay:'+(Math.random()*6).toFixed(1)+'s;--max-op:'+(Math.random()*0.7+0.2).toFixed(2)+';';
+      ds.appendChild(s);
+    }
+    if(typeof gtag !== 'undefined') gtag('event','purchase_complete',{currency:'USD',value:9.99,items:[{item_name:'The Midnight Parent'}]});
+    // Clean URL
+    window.history.replaceState({}, document.title, '/');
+  }
+}
+function trackDownload() {
+  if(typeof gtag !== 'undefined') gtag('event','pdf_download',{item_name:'The Midnight Parent'});
+}
+// Run on page load
+checkPurchase();
 
 // ── Policy pages ──
 var policyContent = {
