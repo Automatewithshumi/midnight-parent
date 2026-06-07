@@ -582,58 +582,7 @@ footer { background: #111018; padding: 3rem 6rem; display: flex; justify-content
     <h2 class="section-title">Words for the <em>3am Hours</em></h2>
     <p style="color:var(--muted);font-size:0.9rem;max-width:500px;margin:0 auto">New articles every week &#8212; on the emotions, the sleep, and the humanity of new parenthood.</p>
   </div>
-  <div class="blog-grid">
-    <div class="blog-card" onclick="openPost('post1')">
-      <div class="blog-card-img emotion">&#127769;</div>
-      <div class="blog-card-body">
-        <p class="blog-tag">Emotional Health</p>
-        <h3 class="blog-card-title">The Emotion Nobody Warned You About: Anticipatory Grief in New Parenthood</h3>
-        <p class="blog-card-excerpt">You haven&#8217;t lost anything &#8212; so why does it feel like grief? Here&#8217;s what&#8217;s actually happening in those early weeks.</p>
-        <div class="blog-meta"><span>Shumani Phaswana</span><span>5 min read</span></div>
-        <a class="blog-read-more">Read Article &#8594;</a>
-      </div>
-    </div>
-    <div class="blog-card" onclick="openPost('post2')">
-      <div class="blog-card-img sleep">&#127774;</div>
-      <div class="blog-card-body">
-        <p class="blog-tag">Baby Sleep</p>
-        <h3 class="blog-card-title">Why Your Baby Wakes Every 45 Minutes (And Why That&#8217;s Actually Normal)</h3>
-        <p class="blog-card-excerpt">Understanding your newborn&#8217;s sleep cycles changes everything. The science behind why short stretches are by design, not a problem.</p>
-        <div class="blog-meta"><span>Shumani Phaswana</span><span>4 min read</span></div>
-        <a class="blog-read-more">Read Article &#8594;</a>
-      </div>
-    </div>
-    <div class="blog-card" onclick="openPost('post3')">
-      <div class="blog-card-img mixed">&#10024;</div>
-      <div class="blog-card-body">
-        <p class="blog-tag">Wellbeing</p>
-        <h3 class="blog-card-title">Box Breathing at 3am: The Simple Tool That Helps You Stay Calm When Your Baby Won&#8217;t Sleep</h3>
-        <p class="blog-card-excerpt">Your calm is your baby&#8217;s calm. This one breathing technique activates your nervous system&#8217;s rest response in under two minutes.</p>
-        <div class="blog-meta"><span>Shumani Phaswana</span><span>3 min read</span></div>
-        <a class="blog-read-more">Read Article &#8594;</a>
-      </div>
-    </div>
-    <div class="blog-card" onclick="openPost('post4')">
-      <div class="blog-card-img sleep">&#127774;</div>
-      <div class="blog-card-body">
-        <p class="blog-tag">Baby Sleep</p>
-        <h3 class="blog-card-title">Why Your Newborn Won&#8217;t Sleep Longer Than 2 Hours (And Why That&#8217;s Completely Normal)</h3>
-        <p class="blog-card-excerpt">Your baby is not broken. And neither are you. Here&#8217;s the biology behind why short stretches are completely normal in the early weeks.</p>
-        <div class="blog-meta"><span>Shumani Phaswana</span><span>5 min read</span></div>
-        <a class="blog-read-more">Read Article &#8594;</a>
-      </div>
-    </div>
-    <div class="blog-card" onclick="openPost('post5')">
-      <div class="blog-card-img emotion">&#127774;</div>
-      <div class="blog-card-body">
-        <p class="blog-tag">Emotional Health</p>
-        <h3 class="blog-card-title">Is It Normal to Cry After Having a Baby? What No One Tells You About Postpartum Emotions</h3>
-        <p class="blog-card-excerpt">The love, yes. The exhaustion, yes. But not the part where you find yourself crying with no idea why. Let&#8217;s talk about it.</p>
-        <div class="blog-meta"><span>Shumani Phaswana</span><span>5 min read</span></div>
-        <a class="blog-read-more">Read Article &#8594;</a>
-      </div>
-    </div>
-  </div>
+  <div class="blog-grid" id="blogGrid"></div>
   <div class="blog-cta">
     <p>New articles published every week. Subscribe below so you never miss one.</p>
   </div>
@@ -821,22 +770,62 @@ function handleNewsletter(){
 }
 
 // ── Blog Posts ──
+// ═══ BLOG POSTS ═══
+// TO ADD A NEW POST: just add a new entry here — cards generate automatically!
+// Copy the format below, increment the number (post6, post7 etc)
+// img options: 'emotion' | 'sleep' | 'mixed' | 'wellbeing'
+// emoji: pick any relevant emoji for the card image
+
 var posts = {
   post1: {
     tag: 'Emotional Health',
+    img: 'emotion', emoji: '&#127769;',
+    excerpt: 'You haven&#8217;t lost anything &#8212; so why does it feel like grief? Here&#8217;s what&#8217;s actually happening.',
+    read: '5 min read',
+  post1: {
+    tag: 'Emotional Health',
+    img: 'emotion', emoji: '&#127769;',
+    excerpt: 'You haven&#8217;t lost anything &#8212; so why does it feel like grief? Here&#8217;s what&#8217;s actually happening.',
+    read: '5 min read',
     title: 'The Emotion Nobody Warned You About: Anticipatory Grief in New Parenthood',
     body: '<p>You haven&#8217;t lost anything in the traditional sense. Your baby is here, safe and warm. The love is real and enormous. So why does something feel like grief?</p><h2>What is anticipatory grief?</h2><p>Many new parents experience a disorienting form of grief in the early weeks and months &#8212; not for a person, but for a self. Your pre-parent identity. Your freedom of movement. The relationship with your partner as it used to be. Your body as you knew it. Your sleep.</p><p>This is grief. And it is valid.</p><blockquote>Grieving your pre-parent self while loving your baby is not a contradiction &#8212; it is a sign of processing a massive transition.</blockquote><h2>Why nobody talks about it</h2><p>There is an unspoken cultural pressure on new parents to feel only gratitude. You wanted this, the message goes. You should be happy. But gratitude and grief are not opposites. The human heart is large enough to hold both simultaneously.</p><p>When parents feel this unnamed sadness, many assume something is wrong with them. They carry it silently, adding shame to an already heavy load. The reality is that almost every new parent experiences some version of this &#8212; and naming it is the first step toward moving through it.</p><h2>What to do with it</h2><p>First: let yourself feel it. Acknowledge that something significant has changed. Give the feeling a name. Talk to your partner, a trusted friend, or a therapist who understands the perinatal period.</p><p>Second: hold it alongside the love. These feelings do not cancel each other out. You are not failing as a parent by missing your former life. You are human.</p><p>Third: know that the identity you are building now &#8212; as a parent &#8212; is as real and full as the one that came before. It just takes time to feel like home.</p><div class="post-cta-box"><p>&#8220;You are not just surviving this season. You are building something.&#8221;</p><button class="btn-primary" onclick="closePost();buyNow()">Get the Full Book &#8212; $9.99</button></div>'
   },
   post2: {
     tag: 'Baby Sleep',
+    img: 'sleep', emoji: '&#127774;',
+    excerpt: 'Understanding your newborn&#8217;s sleep cycles changes everything. The science behind why short stretches are by design.',
+    read: '4 min read',
     title: 'Why Your Baby Wakes Every 45 Minutes (And Why That\'s Actually Normal)',
     body: '<p>It is one of the most disorienting discoveries of new parenthood: you put a sleeping baby down, tiptoe out of the room, and exactly 45 minutes later &#8212; they are awake. Every time. Like clockwork.</p><p>This is not coincidence. And it is not a problem with your baby, or with your parenting.</p><h2>The architecture of newborn sleep</h2><p>Adult sleep cycles last roughly 90 minutes. Newborn sleep cycles last approximately 45 minutes. Within each cycle, babies spend significantly more time in light, active sleep than adults do. They surface to a near-waking state at the end of each cycle &#8212; and unlike adults, they haven&#8217;t yet learned to link cycles together and drift back under.</p><p>This is not a design flaw. Light sleep in newborns is protective. It allows them to rouse quickly if they are cold, hungry, or in need of comfort. The sensitivity that disrupts your night is, in the earliest months, keeping your baby safe.</p><blockquote>Your baby&#8217;s sleep is not broken. And neither are you.</blockquote><h2>When does it get better?</h2><p>Sleep architecture matures over time. By around 3 to 4 months, many babies begin to consolidate sleep cycles &#8212; though this also coincides with the well-known 4-month sleep regression, when the brain undergoes its first major developmental shift in sleep structure.</p><p>Between 6 and 12 months, most babies begin to sleep more predictably. But every baby moves at their own pace, and comparison to other people&#8217;s children is rarely useful.</p><h2>What you can do now</h2><p>Understanding the 45-minute cycle can help you respond with less panic. When your baby stirs at that mark, give them a moment before rushing in &#8212; sometimes they will resettle on their own. A consistent wind-down routine, practiced from around 3 to 4 months, also helps signal that sleep is coming and can improve how quickly babies settle.</p><p>And on the hardest nights: this phase is temporary. It already is changing, even when you cannot see it.</p><div class="post-cta-box"><p>&#8220;Comparison is the thief of joy &#8212; and in the early months, it is the thief of sleep too.&#8221;</p><button class="btn-primary" onclick="closePost();buyNow()">Get the Full Book &#8212; $9.99</button></div>'
   },
   post3: {
     tag: 'Wellbeing',
+    img: 'mixed', emoji: '&#10024;',
+    excerpt: 'Your calm is your baby&#8217;s calm. This one breathing technique activates your nervous system&#8217;s rest response in under two minutes.',
+    read: '3 min read',
     title: 'Box Breathing at 3am: The Simple Tool That Helps You Stay Calm When Your Baby Won\'t Sleep',
     body: '<p>It is the middle of the night. You have been awake for hours. Your baby is crying and you have tried everything. Your body is flooded with stress hormones, your mind is racing, and somewhere in you, something is starting to crack.</p><p>This is the moment for box breathing.</p><h2>Why it works</h2><p>When we are stressed or sleep-deprived, our nervous system activates the fight-or-flight response. Heart rate increases. Breathing becomes shallow. Stress hormones flood the body. Box breathing directly counteracts this by activating the parasympathetic nervous system &#8212; the rest-and-digest state &#8212; through deliberate breath control.</p><p>It takes under two minutes. You can do it while holding your baby.</p><h2>How to do it</h2><p><strong>Inhale</strong> slowly for 4 counts. <strong>Hold</strong> for 4 counts. <strong>Exhale</strong> for 4 counts. <strong>Hold</strong> for 4 counts. Repeat three times.</p><p>That&#8217;s it. The counting gives your mind something to anchor to, interrupting the spiral of anxious thought. The extended exhale activates the vagus nerve, which signals safety to your nervous system.</p><blockquote>Your calm is your baby&#8217;s calm. When you regulate your own nervous system, you help regulate theirs.</blockquote><h2>Other tools for the hardest moments</h2><p>The body scan: before getting up for a night feed, spend 30 seconds consciously releasing tension from your head to your feet. You will get up more resourced.</p><p>One good thing: when nights feel endless, find one small anchor &#8212; the warmth of your baby&#8217;s weight, a cup of tea, a quiet house. This is not toxic positivity. It is survival.</p><p>And if you are consistently finding that anxiety is preventing you from resting even when your baby sleeps &#8212; that is worth speaking to someone about. Postpartum anxiety is common, underdiagnosed, and very treatable.</p><div class="post-cta-box"><p>&#8220;Feeling your feelings is not the same as acting on them. You can be overwhelmed and still be a good parent.&#8221;</p><button class="btn-primary" onclick="closePost();buyNow()">Get the Full Book &#8212; $9.99</button></div>'
   }
+,
+
+  post4: {
+    tag: 'Baby Sleep',
+    img: 'sleep', emoji: '&#127774;',
+    excerpt: 'Your baby is not broken. And neither are you. Here&#8217;s the biology behind why short stretches are completely normal.',
+    read: '5 min read',
+    title: 'Why Your Newborn Won\'t Sleep Longer Than 2 Hours (And Why That\'s Completely Normal)',
+    body: '<p>It is 2am. You have just put your baby down after a feed, tiptoed out of the room, and exhaled for the first time in an hour. You close your eyes. And then, two hours later exactly, the crying starts again.</p><p>If this is your life right now, I want you to know something important: your baby is not broken. And neither are you.</p><h2>Why newborns wake every 2 hours</h2><p>Here is the biology. Adult sleep cycles last roughly 90 minutes. Newborn sleep cycles last approximately 45 minutes &#8212; and unlike adults, babies have not yet learned to link those cycles together. They surface to a near-waking state at the end of each cycle, and if they need something &#8212; food, comfort, warmth, you &#8212; they will wake fully.</p><p>A newborn between 0 and 3 months typically sleeps 14 to 17 hours in a 24-hour period, broken into stretches of 2 to 4 hours. The idea of a newborn sleeping through the night is a cultural myth that causes enormous unnecessary guilt. It is not developmentally expected, and it is not something you have caused by doing anything wrong.</p><h2>Why this is actually protective</h2><p>Your baby&#8217;s light, frequent sleep is not a design flaw. It is a feature. Newborns spend significantly more time in active, light sleep than adults do. This allows them to rouse quickly if they are cold, hungry, or in distress. In the earliest months, that sensitivity is keeping them safe.</p><blockquote>Your baby&#8217;s sleep is not broken. And neither are you.</blockquote><h2>When does it get better?</h2><p>Sleep architecture matures gradually over the first year. By 3 to 6 months, many babies begin to give you one slightly longer stretch. By 6 to 12 months, most babies sleep more predictably &#8212; though &#8220;through the night&#8221; at this age typically means 5 to 6 hours, not 8 to 10.</p><p>Every baby moves at their own pace. The most damaging thing you can do is compare your baby&#8217;s sleep to someone else&#8217;s. Their baby&#8217;s night is not your baby&#8217;s night.</p><h2>What you can do right now</h2><p>In the early weeks, survival is the goal. Sleep when your baby sleeps where you can. Accept every offer of help. Lower every standard that is not safety.</p><p>From around 6 to 8 weeks, a simple wind-down routine &#8212; a bath, a feed, a song, darkness &#8212; begins to signal to your baby&#8217;s developing brain that sleep is coming. Consistency matters more than complexity. Even a 3-step routine practiced nightly can begin to shift things within a few weeks.</p><p>And on the nights when nothing works: you are not failing. You are doing one of the hardest things a human being can do. You showed up. That is everything.</p><div class="post-cta-box"><p>&#8220;Comparison is the thief of joy &#8212; and in the early months, it is the thief of sleep too.&#8221;</p><button class="btn-primary" onclick="closePost();buyNow()">Read more in The Midnight Parent &#8212; R162</button></div>'
+  },
+
+  post5: {
+    tag: 'Emotional Health',
+    img: 'emotion', emoji: '&#127769;',
+    excerpt: 'The love, yes. The exhaustion, yes. But not the part where you find yourself crying with no idea why. Let&#8217;s talk about it.',
+    read: '5 min read',
+    title: 'Is It Normal to Cry After Having a Baby? What No One Tells You About Postpartum Emotions',
+    body: '<p>Nobody warned you about this part. The love, yes. The exhaustion, yes. But not the way you would find yourself crying at the kitchen sink on a Tuesday morning with no idea why. Not the way you would feel, underneath the enormous tenderness, something else entirely &#8212; something heavier, harder to name.</p><p>So let me ask you directly: is it normal to cry after having a baby? Yes. Completely, fully, unreservedly yes.</p><h2>The baby blues</h2><p>In the first 3 to 5 days after birth, up to 80% of new mothers experience what is known as the baby blues &#8212; sudden waves of emotion, tearfulness, irritability, and anxiety that arrive without warning and leave just as quickly. This is driven almost entirely by the dramatic hormonal shift your body undergoes after delivery. The baby blues typically resolve on their own within two weeks.</p><h2>When it is more than the blues</h2><p>Postpartum depression is different. It is more persistent, more pervasive, and it does not lift on its own. It affects approximately 1 in 5 new parents &#8212; including fathers and non-birthing parents &#8212; and it is one of the most underdiagnosed conditions in medicine.</p><blockquote>Gratitude and struggle are not opposites. You can love your baby completely and still find this period genuinely, devastatingly hard.</blockquote><p>Signs that warrant a conversation with your doctor or midwife include: persistent low mood lasting more than two weeks; feeling detached from your baby; difficulty sleeping even when your baby sleeps; loss of interest in things you normally enjoy; intrusive or frightening thoughts; and feeling like you are not able to cope. If any of these sound familiar &#8212; please reach out. Postpartum depression is highly treatable.</p><h2>The grief no one names</h2><p>Beyond the blues and beyond depression, there is a third emotional experience that almost no one talks about: grief. Not grief for a person, but grief for a self. Your pre-parent identity. Your freedom. Your body as it was. Your relationship as it was before this small person arrived and rearranged everything.</p><p>This grief is real. It is valid. And it sits alongside the love &#8212; not instead of it. You are allowed to grieve what has changed while being deeply grateful for what you have gained. Both things are true. Both things can live in the same heart at the same time.</p><h2>What to do tonight</h2><p>Tell someone how you are really doing. Not the edited version. The real one. A partner, a friend, your midwife, your GP. You do not have to carry this alone. And if you are not ready to say it out loud yet &#8212; know that what you are feeling has a name, it is not your fault, and it will not always feel this way.</p><div class="post-cta-box"><p>&#8220;You are not broken. You are not failing. You are a midnight parent.&#8221;</p><button class="btn-primary" onclick="closePost();buyNow()">Read more in The Midnight Parent &#8212; R162</button></div>'
+  }
+
 };
 
 function openPost(id) {
@@ -853,6 +842,33 @@ function closePost() {
   document.getElementById('postOverlay').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+// ── Blog grid auto-render ──
+// This function reads ALL posts and builds the cards automatically
+// You never need to touch the HTML again — just add to the posts object above
+function renderBlogGrid() {
+  var grid = document.getElementById('blogGrid');
+  if (!grid) return;
+  var html = '';
+  var keys = Object.keys(posts);
+  // Show newest first
+  keys.reverse();
+  keys.forEach(function(id) {
+    var p = posts[id];
+    html += '<div class="blog-card" onclick="openPost(\''+id+'\')">'+
+      '<div class="blog-card-img '+p.img+'">'+p.emoji+'</div>'+
+      '<div class="blog-card-body">'+
+        '<p class="blog-tag">'+p.tag+'</p>'+
+        '<h3 class="blog-card-title">'+p.title+'</h3>'+
+        '<p class="blog-card-excerpt">'+p.excerpt+'</p>'+
+        '<div class="blog-meta"><span>Shumani Phaswana</span><span>'+p.read+'</span></div>'+
+        '<a class="blog-read-more">Read Article &#8594;</a>'+
+      '</div>'+
+    '</div>';
+  });
+  grid.innerHTML = html;
+}
+renderBlogGrid();
 
 // ── Purchase detection ──
 function checkPurchase() {
