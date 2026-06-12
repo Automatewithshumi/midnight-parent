@@ -866,25 +866,45 @@ function renderBlogGrid() {
 renderBlogGrid();
 
 // ── Purchase detection ──
+// Only shows download page when Paystack sends a real trxref parameter
+// This prevents fake ?purchased=true visits from triggering the download
 function checkPurchase() {
   var params = new URLSearchParams(window.location.search);
-  if (params.get('purchased') === 'true') {
-    var overlay = document.getElementById('downloadOverlay');
-    overlay.classList.add('show');
-    document.body.style.overflow = 'hidden';
-    // Add stars to download overlay
-    var ds = document.getElementById('dlStars');
-    for (var i = 0; i < 60; i++) {
-      var s = document.createElement('div');
-      s.className = 'star';
-      var sz = Math.random()*2.5+0.5;
-      s.style.cssText = 'width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100)+'%;top:'+(Math.random()*100)+'%;--dur:'+(Math.random()*3+2).toFixed(1)+'s;--delay:'+(Math.random()*6).toFixed(1)+'s;--max-op:'+(Math.random()*0.7+0.2).toFixed(2)+';';
-      ds.appendChild(s);
-    }
-    if(typeof gtag !== 'undefined') gtag('event','purchase_complete',{currency:'ZAR',value:162,items:[{item_name:'The Midnight Parent'}]});
-    // Clean URL
+  var trxref = params.get('trxref') || params.get('reference');
+  var purchased = params.get('purchased');
+
+  // Must have a real Paystack transaction reference to show download
+  // trxref is automatically added by Paystack after real payment
+  if (trxref && trxref.length > 5) {
+    showDownloadPage(trxref);
+  } else if (purchased === 'true' && !trxref) {
+    // URL has ?purchased=true but no real Paystack reference — ignore it
     window.history.replaceState({}, document.title, '/');
   }
+}
+
+function showDownloadPage(trxref) {
+  var overlay = document.getElementById('downloadOverlay');
+  overlay.classList.add('show');
+  document.body.style.overflow = 'hidden';
+  // Add stars to download overlay
+  var ds = document.getElementById('dlStars');
+  for (var i = 0; i < 60; i++) {
+    var s = document.createElement('div');
+    s.className = 'star';
+    var sz = Math.random()*2.5+0.5;
+    s.style.cssText = 'width:'+sz+'px;height:'+sz+'px;left:'+(Math.random()*100)+'%;top:'+(Math.random()*100)+'%;--dur:'+(Math.random()*3+2).toFixed(1)+'s;--delay:'+(Math.random()*6).toFixed(1)+'s;--max-op:'+(Math.random()*0.7+0.2).toFixed(2)+';';
+    ds.appendChild(s);
+  }
+  // Fire real GA purchase event only when Paystack trxref is present
+  if(typeof gtag !== 'undefined') gtag('event','purchase',{
+    currency:'ZAR',
+    value:162,
+    transaction_id: trxref,
+    items:[{item_name:'The Midnight Parent', price:162, quantity:1}]
+  });
+  // Clean URL after recording
+  window.history.replaceState({}, document.title, '/');
 }
 function trackDownload() {
   if(typeof gtag !== 'undefined') gtag('event','pdf_download',{item_name:'The Midnight Parent'});
